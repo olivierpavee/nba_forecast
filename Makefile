@@ -53,3 +53,18 @@ pypi_test:
 
 pypi:
 	@twine upload dist/* -u $(PYPI_USERNAME)
+
+# ----------------------------------
+#      COMMANDES APIs
+# ----------------------------------
+
+run_api_localy:
+	uvicorn nba_forecast.api.fast:app --reload  # load web server with code autoreload
+
+
+# ----------------------------------
+#      STREAMLIT
+# ----------------------------------
+
+streamlit:
+	-@streamlit run app.py
