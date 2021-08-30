@@ -1,31 +1,31 @@
-team,team_name
-CLE,Cleveland Cavaliers
-MIN,Minnesota Timberwolves
-UTA,Utah Jazz
-DET,Detroit Pistons
-TOR,Toronto Raptors
-WAS,Washington Wizards
-SAC,Sacramento Kings
-NOP,New Orleans Pelicans
-CHA,Charlotte Hornets
-MIL,Milwaukee Bucks
-GSW,Golden State Warriors
-ORL,Orlando Magic
-PHO,Phoenix Suns
-LAC,Los Angeles Clippers
-IND,Indiana Pacers
-PHI,Philadelphia 76ers
-NYK,New York Knicks
-ATL,Atlanta Hawks
-MEM,Memphis Grizzlies
-LAL,Los Angeles Lakers
-POR,Portland Trailblazers
-DEN,Denver Nuggets
-HOU,Houston Rockets
-OKC,Oklahoma City Thunder
-BOS,Boston Celtics
-DAL,Dallas Mavericks
-BRK,Brooklyn Nets
-MIA,Miami Heat
-SAS,San Antonio Spurs
-CHI,Chicago Bulls
+pick_order,team,team_name
+1,CLE,Cleveland Cavaliers
+2,MIN,Minnesota Timberwolves
+3,UTA,Utah Jazz
+4,DET,Detroit Pistons
+5,TOR,Toronto Raptors
+6,WAS,Washington Wizards
+7,SAC,Sacramento Kings
+8,NOP,New Orleans Pelicans
+9,CHA,Charlotte Hornets
+10,MIL,Milwaukee Bucks
+11,GSW,Golden State Warriors
+12,ORL,Orlando Magic
+13,PHO,Phoenix Suns
+14,LAC,Los Angeles Clippers
+15,IND,Indiana Pacers
+16,PHI,Philadelphia 76ers
+17,NYK,New York Knicks
+18,ATL,Atlanta Hawks
+19,MEM,Memphis Grizzlies
+20,LAL,Los Angeles Lakers
+21,POR,Portland Trailblazers
+22,DEN,Denver Nuggets
+23,HOU,Houston Rockets
+24,OKC,Oklahoma City Thunder
+25,BOS,Boston Celtics
+26,DAL,Dallas Mavericks
+27,BRK,Brooklyn Nets
+28,MIA,Miami Heat
+29,SAS,San Antonio Spurs
+30,CHI,Chicago Bulls
