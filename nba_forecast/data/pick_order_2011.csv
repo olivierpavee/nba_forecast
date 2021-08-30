@@ -1,31 +1,31 @@
-team
-CLE
-MIN
-UTA
-DET
-TOR
-WAS
-SAC
-DET
-CHA
-MIL
-GSW
-ORL
-PHO
-LAC
-IND
-PHI
-NYK
-ATL
-MEM
-LAL
-POR
-DEN
-HOU
-OKC
-BOS
-DAL
-BRK
-MIA
-SAS
-CHI
+team,team_name
+CLE,Cleveland Cavaliers
+MIN,Minnesota Timberwolves
+UTA,Utah Jazz
+DET,Detroit Pistons
+TOR,Toronto Raptors
+WAS,Washington Wizards
+SAC,Sacramento Kings
+NOP,New Orleans Pelicans
+CHA,Charlotte Hornets
+MIL,Milwaukee Bucks
+GSW,Golden State Warriors
+ORL,Orlando Magic
+PHO,Phoenix Suns
+LAC,Los Angeles Clippers
+IND,Indiana Pacers
+PHI,Philadelphia 76ers
+NYK,New York Knicks
+ATL,Atlanta Hawks
+MEM,Memphis Grizzlies
+LAL,Los Angeles Lakers
+POR,Portland Trailblazers
+DEN,Denver Nuggets
+HOU,Houston Rockets
+OKC,Oklahoma City Thunder
+BOS,Boston Celtics
+DAL,Dallas Mavericks
+BRK,Brooklyn Nets
+MIA,Miami Heat
+SAS,San Antonio Spurs
+CHI,Chicago Bulls
