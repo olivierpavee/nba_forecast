@@ -1,13 +1,23 @@
 import streamlit as st
+from nba_forecast.data import get_data_using_pandas
 
-def get_list_team(dataFrame):
+
+
+
+def get_list_team(year):
+    if year == 2011:
+        dataFrame = get_data_using_pandas('po2011')
+    if year == 2021:
+        dataFrame = get_data_using_pandas('po2021')
+
     dataFrame['team_to_select'] = dataFrame.apply(lambda row:f"{row.team_name} ({row.team})", axis=1)
     return dataFrame['team_to_select'].sort_values().tolist()
 
-
-def recommandation():
+def recommandation(year, team):
     prediction_table = st.expander('Discover our predictions !')
     with prediction_table:
+        st.text(year)
+        st.text(team)
         col3, col4 = st.columns([1,1])
         col5, col6 = st.columns([1,1])
         col7, col8 = st.columns([1,1])

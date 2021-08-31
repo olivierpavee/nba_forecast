@@ -6,25 +6,16 @@ from load_css import local_css
 from nba_forecast.data import get_data_using_pandas
 from nba_forecast.app_utils import get_list_team, recommandation
 
-# lancement = True
-def get_list_team(dataFrame):
-    dataFrame['team_to_select'] = dataFrame.apply(lambda row:f"{row.team_name} ({row.team})", axis=1)
-    return dataFrame['team_to_select'].sort_values().tolist()
-
 #Chargement du style CSS
 local_css("style.css")
 
 #Chargement des DF avec le noms des équipes selon les années
-df_team_2011 = get_data_using_pandas('po2011')
-df_team_2021 = get_data_using_pandas('po2021')
+
 
 #Chargement des titres
 st.markdown('<center><h1 class="highlight black">Delphes Prediction</h1></center>', unsafe_allow_html=True)
 st.markdown('<center>The Most Powerful NBA Predictor!</center>', unsafe_allow_html=True)
 st.markdown('---', unsafe_allow_html=True)
-
-year_draft_2011 = False
-year_draft_2021 = False
 
 # def main():
 #Chargement du choix utilisateur
@@ -34,15 +25,18 @@ col1.image('https://pbs.twimg.com/media/EaAqhJEXgAAQuQ6?format=jpg&name=large', 
 col2.markdown('<h2 class="highlight grey">Choose your team:</h2>', unsafe_allow_html=True)
 
     #Sélection d'une année
-    #, on_click=main()
-
 year_draft_2011 = col2.button('2011')
 year_draft_2021 = col2.button('2021')
 
 if year_draft_2011:
-    team_nba = col2.selectbox('Select a team!', get_list_team(df_team_2011), on_change=recommandation())
-if year_draft_2021:
-    team_nba = col2.selectbox('Select a team!', get_list_team(df_team_2021), on_change=recommandation())
+    team_nba = col2.selectbox('Select a team!', get_list_team(2011))
+
+
+
+# if year_draft_2021:
+#     team_nba = col2.selectbox('Select a team!', get_list_team(2021))
+#     if team_nba:
+#         recommandation(2021,team_nba)
 
 
 # def recommandation():
