@@ -1,8 +1,7 @@
 import streamlit as st
 from nba_forecast.data import get_data_using_pandas
-
-
-
+from sklearn.preprocessing import MinMaxScaler
+import pandas as pd
 
 def get_list_team(year):
     if year == 2011:
@@ -13,42 +12,26 @@ def get_list_team(year):
     dataFrame['team_to_select'] = dataFrame.apply(lambda row:f"{row.team_name} ({row.team})", axis=1)
     return dataFrame['team_to_select'].sort_values().tolist()
 
-def recommandation(year, team):
-    prediction_table = st.expander('Discover our predictions !')
-    with prediction_table:
-        st.text(year)
-        st.text(team)
-        col3, col4 = st.columns([1,1])
-        col5, col6 = st.columns([1,1])
-        col7, col8 = st.columns([1,1])
-        col9, col10 = st.columns([1,1])
 
-        col3.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
+def get_stat_team(team_name, year_draft):
+        scaler = MinMaxScaler()
+        if year_draft == 2011:
+            dataFrame = get_data_using_pandas('team_stats_2011').drop(['off_rank','def_rank'], axis=1)
+        if year_draft == 2021:
+            dataFrame = get_data_using_pandas('team_stats_2021').drop(['off_rank','def_rank'], axis=1)
 
-        col4.success('Top 1')
-        col4.text('James Harden')
-        col4.text('Def score :')
-        col4.text('Off score :')
+        dataFrame['def_rtg'] = 1/dataFrame['def_rtg']
+        dataFrame['attendance'] = dataFrame['attendance'].apply(lambda x:x.replace(',',''))
 
-        col5.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
+        features = list(dataFrame)[1:]
+        scaled_values = scaler.fit_transform(dataFrame.drop(['Team'], axis=1))
 
-        col6.success('Top 2')
-        col6.text('James Harden')
-        col6.text('Def score :')
-        col6.text('Off score :')
+        scaled_df = pd.DataFrame(scaled_values, columns=features)
+        scaled_df["Team"] = dataFrame["Team"]
+        #print(scaled_df)
 
-        col7.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
+        scaled_df.rename(columns={"expected_winrate": "Expected Winrate", "attendance": "Attendance", "pace": "Pace", "def_rtg": "Defense", "off_rtg": "Attack"}, inplace=True)
 
-        col8.warning('Top 2')
-        col8.text('James Harden')
-        col8.text('Def score :')
-        col8.text('Off score :')
+        row = scaled_df[scaled_df['Team'] == team_name]
 
-        col9.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
-
-        col10.error('Top 5')
-        col10.text('James Harden')
-        col10.text('Def score :')
-        col10.text('Off score :')
-
-    return prediction_table
+        return row
