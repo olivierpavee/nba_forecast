@@ -6,18 +6,27 @@ def get_data_using_pandas(name_dataset):
 
     if name_dataset == 'po2011':
         df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/pick_order_2011.csv")
+        df = df.append({'pick_order':'99','team':'Choose a team!','team_name':2011}, ignore_index=True)
 
     elif name_dataset == 'po2021':
         df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/pick_order_2021.csv")
+        df = df.append({'pick_order':'99','team':'Choose a team!','team_name':2021}, ignore_index=True)
 
     elif name_dataset == 'dataset_draft_2021':
         df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/univ_data_2021.csv")
 
     elif name_dataset == 'train':
         df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/common_dataset.csv")
+
     elif name_dataset == 'train_risk':
         df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/risk_dataset.csv")
-    
+
+    elif name_dataset == 'team_stats_2021':
+        df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/team_stats_2021.csv")
+
+    elif name_dataset == 'team_stats_2011':
+        df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/team_stats_2011.csv")
+
     return df
 
 def filter_data(df,type):
