@@ -7,6 +7,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.feature_selection import VarianceThreshold
 from metrics import compute_mse
 import joblib
+import sys
 
 class Trainer():
     def __init__(self, model_type):
@@ -17,7 +18,10 @@ class Trainer():
         self.model_type = model_type
         self.pipeline = None
 
-        data = get_data_using_pandas('train')
+        if model_type == ('model_risk'):
+            data = get_data_using_pandas('train_risk')
+        else:
+            data = get_data_using_pandas('train')
         self.X = filter_data(data,model_type)        
 
         if model_type == 'model_off':            
@@ -25,8 +29,7 @@ class Trainer():
         elif model_type == 'model_def':
             self.y = data['ratio_def']
         elif model_type == 'model_risk':
-            #TO BE DONE
-            self.y = []
+            self.y = data['3rd_NBA_season']
 
         self.model = get_model(model_type)
 
@@ -61,28 +64,32 @@ class Trainer():
             
             variance_threshold_pipe = VarianceThreshold(threshold=0.01)
 
-            self.pipe = Pipeline([
+            self.pipeline = Pipeline([
                 ('preproc', preproc_transformer),
                 ('var', variance_threshold_pipe),
                 ('ridge', self.model)
             ])
 
         elif self.model_type == 'model_risk':
-            #TO BE DONE
-            pass
+            self.pipeline = Pipeline([
+                ('rob_scaler', RobustScaler()),
+                ('log_reg',self.model)
+            ])
 
     def run(self):
         """set and train the pipeline"""
-        self.set_pipeline(self.model)
+        self.set_pipeline()
         self.pipeline.fit(self.X, self.y)
-
-    def evaluate(self, X_test, y_test):
-        """evaluates the pipeline on df_test and return the RMSE"""
-        y_pred = self.pipeline.predict(X_test)
-        rmse = compute_mse(y_pred, y_test)
-        return rmse
 
     def save_model(self):
         """ Save the trained model into a model.joblib file """
-        filename = 'model.joblib'
-        joblib.dump(self.pipeline, filename)
+        self.filename = f"{self.model_type}.joblib"
+        joblib.dump(self.pipeline, self.filename)
+
+if __name__ == "__main__":
+    model_arg = str(sys.argv[1])
+    trainer = Trainer(model_type=model_arg)
+    trainer.run()
+    trainer.save_model()
+    print(f"{trainer.filename} saved !")
+
