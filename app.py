@@ -36,13 +36,14 @@ st.markdown('---', unsafe_allow_html=True)
 # def main():
 #Chargement du choix utilisateur
     #Image + titre
-
-col3 = st.sidebar.columns([1])
-#col1.image('https://pbs.twimg.com/media/EaAqhJEXgAAQuQ6?format=jpg&name=large', width=300)
+col1d, col2d, col3d = st.columns([1,1,1])
+if st.session_state.team_nba == 'False':
+    col2d.image('https://pbs.twimg.com/media/EaAqhJEXgAAQuQ6?format=jpg&name=large', width=300)
 #st.sidebar.image('img/boule_cristal.jpg', width=150)
 #col2.markdown('<span class="highlight grey">For which year would you like a prediction?</span>', unsafe_allow_html=True)
 
     #Sélection d'une année
+st.sidebar.text('Choose a year!')
 col1, col2 = st.sidebar.columns([1,1])
 col1.button('2011', key='btn_2011', on_click=YearDraftSelect, args=(2011,))
 col2.button('2021', key='btn_2021', on_click=YearDraftSelect, args=(2021,))
@@ -62,6 +63,7 @@ if st.session_state.team_nba not in ['2021 (Choose a team!)','2011 (Choose a tea
     #st.write(team_row_df)
     team_value = team_row_df.values.tolist()[0][:-1]
     team_label = team_row_df.columns.tolist()[:-1]
+    st.markdown('<center><h2 class="blue bold_2">Team performances</h2></center>', unsafe_allow_html=True)
     fig_plotly = px.line_polar(team_row_df, r=team_value, theta=team_label, line_close=True)
     fig_plotly.update_traces(fill='toself')
     fig_plotly.update_layout(

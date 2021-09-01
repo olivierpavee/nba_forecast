@@ -11,8 +11,14 @@
   padding-left: 1rem;
   font-weight: 700;
 }
+.bold_2 {
+  padding: 1rem;
+  font-weight: 500;
+}
 .blue {
-  background-color: lightblue;
+  opacity: 0.65;
+  box-shadow: inset 0px 0px 10px 10px paleturquoise;
+  border-radius: 50%;
 }
 .red {
   background-color: lightcoral;
