@@ -1,9 +1,10 @@
 import streamlit as st
+import random
 import datetime
 import requests
 import time
 from load_css import local_css
-from nba_forecast.app_utils import get_list_team, get_stat_team
+from nba_forecast.app_utils import get_list_team, get_stat_team, reco_by_pos
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -54,7 +55,7 @@ if st.session_state.year_draft == 2021:
 
 if st.session_state.team_nba not in ['2021 (Choose a team!)','2011 (Choose a team!)','False']:
     st.session_state.position = ''
-    st.session_state.position = st.sidebar.selectbox('What position are you looking for?', ['Position', 'SF','BG','SG','PF','C'])
+    st.session_state.position = st.sidebar.selectbox('What position are you looking for?', ['Position', 'SF','PG','SG','PF','C'])
     team_acro = st.session_state.team_nba[-4:-1]
     year_draft = st.session_state.year_draft
     team_row_df = get_stat_team(team_acro, year_draft)
@@ -84,49 +85,77 @@ if st.session_state.team_nba not in ['2021 (Choose a team!)','2011 (Choose a tea
     # )
 
     #herokuuuu COUOCUOCUOCUC
-
-
     st.plotly_chart(fig_plotly,use_container_width=True)
 
 if st.session_state.position not in ['Position','']:
+    url_img = ['https://www.basketball-reference.com/req/202106291/images/players/garneke01.jpg',
+                'https://www.basketball-reference.com/req/202106291/images/players/malonka01.jpg',
+                'https://www.basketball-reference.com/req/202106291/images/players/jamesle01.jpg',
+                'https://www.basketball-reference.com/req/202106291/images/players/westbru01.jpg',
+                'https://www.basketball-reference.com/req/202106291/images/players/dunnkr01.jpg',
+                'https://www.basketball-reference.com/req/202106291/images/players/simmobe01.jpg']
+
+    url_img_manquante = ('https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg', 120)
+
+    recommandations = reco_by_pos(st.session_state.year_draft, team_acro, st.session_state.position)
+    print(len(recommandations))
+
     with st.expander('Discover our predictions !'):
-        st.write(st.session_state.team_nba)
-        st.write(st.session_state.position)
         col3, col4 = st.columns([1,1])
         col5, col6 = st.columns([1,1])
         col7, col8 = st.columns([1,1])
         col9, col10 = st.columns([1,1])
+        col11, col12 = st.columns([1,1])
 
-        col3.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
-        col5.image('https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg', width=120)
-        col7.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
-        col9.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
+        liste_column = [[col3, col4],
+                        [col5, col6],
+                        [col7, col8],
+                        [col9, col10],
+                        [col11, col12]]
 
-        col4.success('Top 1')
-        col4.text('James Harden')
-        col4.text('Def score :')
-        col4.text('Off score :')
+        for i in range(len(recommandations)):
+        # st.write(st.session_state.team_nba)
+        # st.write(st.session_state.position)
+            liste_column[i][0].image(url_img.pop(random.randint(0, len(url_img)-1)))
+            if recommandations[i]['risk_proba'] > 0.8:
+                liste_column[i][1].success(f'Top {i+1}')
+            if recommandations[i]['risk_proba'] < 0.8 and recommandations[i]['risk_proba'] > 0.6:
+                liste_column[i][1].warning(f'Top {i+1}')
+            if recommandations[i]['risk_proba'] < 0.6:
+                liste_column[i][1].error(f'Top {i+1}')
+
+
+            liste_column[i][1].subheader(recommandations[i]['player_name'])
+            liste_column[i][1].text(f"Defensive score : {recommandations[i]['uni_def_score']}")
+            liste_column[i][1].text(f"Offensive score : {recommandations[i]['uni_off_score']}")
+
+
+
+        # col3.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
+        # col5.image('https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg', width=120)
+        # col7.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
+        # col9.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
 
         # col5.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
 
-        col6.success('Top 2')
-        col6.text('James Harden')
-        col6.text('Def score :')
-        col6.text('Off score :')
+        # col6.success('Top 2')
+        # col6.text('James Harden')
+        # col6.text('Def score :')
+        # col6.text('Off score :')
 
         # col7.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
 
-        col8.warning('Top 2')
-        col8.text('James Harden')
-        col8.text('Def score :')
-        col8.text('Off score :')
+        # col8.warning('Top 2')
+        # col8.text('James Harden')
+        # col8.text('Def score :')
+        # col8.text('Off score :')
 
         # col9.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
 
-        col10.error('Top 5')
-        col10.text('James Harden')
-        col10.text('Def score :')
-        col10.text('Off score :')
+        # col10.error('Top 5')
+        # col10.text('James Harden')
+        # col10.text('Def score :')
+        # col10.text('Off score :')
 
 
 
