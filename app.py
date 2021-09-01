@@ -53,6 +53,7 @@ if st.session_state.year_draft == 2021:
 
 
 if st.session_state.team_nba not in ['2021 (Choose a team!)','2011 (Choose a team!)','False']:
+    st.session_state.position = ''
     st.session_state.position = st.sidebar.selectbox('What position are you looking for?', ['Position', 'SF','BG','SG','PF','C'])
     team_acro = st.session_state.team_nba[-4:-1]
     year_draft = st.session_state.year_draft
