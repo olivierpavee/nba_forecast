@@ -68,3 +68,17 @@ run_api_localy:
 
 streamlit:
 	-@streamlit run app.py
+
+# ----------------------------------
+#      STREAMLIT
+# ----------------------------------
+
+heroku_login:
+	-@heroku login
+
+heroku_create_app:
+	-@heroku create ${APP_NAME}
+
+deploy_heroku:
+	-@git push heroku master
+	-@heroku ps:scale web=1
