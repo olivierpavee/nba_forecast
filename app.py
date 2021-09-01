@@ -98,7 +98,7 @@ if st.session_state.position not in ['Position','']:
         col9, col10 = st.columns([1,1])
 
         col3.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
-        col5.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
+        col5.image('https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg', width=120)
         col7.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
         col9.image('https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg')
 
