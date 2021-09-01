@@ -29,7 +29,9 @@ def YearDraftSelect(year):
 
 #Chargement des DF avec le noms des équipes selon les années
 #Chargement des titres
-st.markdown('<center><h1 class="highlight black">Delphes Prediction</h1></center>', unsafe_allow_html=True)
+
+st.markdown('<center><h1><span class="delphes">Delphes</span><br/><span class="pred">Prediction</span></center>', unsafe_allow_html=True)
+#st.markdown('<div><h1 class="dp_class">Delphes Prediction</h1></div>', unsafe_allow_html=True)
 st.markdown('<center>The Most Powerful NBA Predictor!</center>', unsafe_allow_html=True)
 st.markdown('---', unsafe_allow_html=True)
 
@@ -38,8 +40,8 @@ st.markdown('---', unsafe_allow_html=True)
     #Image + titre
 col1d, col2d, col3d = st.columns([1,1,1])
 if st.session_state.team_nba == 'False':
-    col2d.image('https://pbs.twimg.com/media/EaAqhJEXgAAQuQ6?format=jpg&name=large', width=300)
-#st.sidebar.image('img/boule_cristal.jpg', width=150)
+    #col2d.image('https://pbs.twimg.com/media/EaAqhJEXgAAQuQ6?format=jpg&name=large', width=300)
+    col2d.image('img/boule_cristal.jpg', width=220)
 #col2.markdown('<span class="highlight grey">For which year would you like a prediction?</span>', unsafe_allow_html=True)
 
     #Sélection d'une année
