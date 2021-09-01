@@ -1,54 +1,51 @@
-name,season,games,minutes_played,per,ts_pct,fg3a_per_fga_pct,fta_per_fga_pct,orb_pct,drb_pct,trb_pct,ast_pct,stl_pct,blk_pct,tov_pct,usg_pct,ows,dws,ws,obpm,dbpm,bpm,uni_url
-Cade Cunningham,2020-21,27,956,21.6,.574,.388,.390,2.3,16.3,9.6,20.4,2.5,2.3,18.7,29.1,2.3,1.7,4.0,5.1,3.2,8.3,https://www.sports-reference.com/cbb/players/cade-cunningham-1.html
-Evan Mobley,2020-21,33,1120,29.1,.624,.117,.566,9.6,18.9,14.5,14.1,1.4,8.8,14.6,22.8,4.3,2.6,6.9,7.9,5.8,13.7,https://www.sports-reference.com/cbb/players/evan-mobley-1.html
-Scottie Barnes,2020-21,24,595,21.4,.548,.205,.338,7.4,11.1,9.3,31.6,3.4,2.1,20.7,23.7,1.5,1.0,2.4,4.3,3.6,7.9,https://www.sports-reference.com/cbb/players/scottie-barnes-1.html
-Jalen Suggs,2020-21,30,868,22.6,.595,.338,.370,2.7,18.0,11.0,23.7,3.5,1.1,19.5,24.8,2.5,2.1,4.6,4.8,4.6,9.4,https://www.sports-reference.com/cbb/players/jalen-suggs-1.html
-Franz Wagner,2020-21,55,1718,19.5,.577,.459,.261,3.2,18.3,11.2,11.8,2.3,2.5,11.7,19.7,4.0,3.4,7.5,4.4,5.0,9.4,https://www.sports-reference.com/cbb/players/franz-wagner-1.html
-Davion Mitchell,2020-21,60,1963,17.6,.565,.435,.254,1.4,8.3,4.8,25.0,3.0,1.3,18.1,19.5,4.7,3.8,8.5,3.5,3.9,7.4,https://www.sports-reference.com/cbb/players/davion-mitchell-1.html
-Ziaire Williams,2020-21,20,558,11.1,.473,.389,.241,2.4,16.4,9.9,16.4,1.7,2.2,20.4,26.5,-0.2,0.9,0.6,-1.2,1.5,0.3,https://www.sports-reference.com/cbb/players/ziaire-williams-1.html
-James Bouknight,2020-21,43,1200,21.2,.554,.296,.367,6.2,12.8,9.4,12.0,1.9,0.9,13.6,27.8,3.3,1.9,5.2,4.9,1.6,6.5,https://www.sports-reference.com/cbb/players/james-bouknight-1.html
-Joshua Primo,2020-21,30,674,13.2,.565,.579,.226,4.7,10.5,7.6,6.5,1.4,1.3,16.0,17.6,1.0,1.1,2.1,1.6,2.1,3.7,https://www.sports-reference.com/cbb/players/joshua-primo-1.html
-Chris Duarte,2020-21,54,1730,23.9,.593,.469,.260,4.4,15.1,9.9,13.2,3.4,2.5,13.1,23.8,5.4,2.8,8.2,6.8,3.1,9.9,https://www.sports-reference.com/cbb/players/chris-duarte-1.html
-Moses Moody,2020-21,32,1082,20.4,.568,.420,.482,6.3,11.8,9.0,8.2,1.6,2.0,9.9,22.3,3.4,1.8,5.2,5.2,2.3,7.4,https://www.sports-reference.com/cbb/players/moses-moody-1.html
-Corey Kispert,2020-21,137,3755,18.5,.626,.576,.218,4.3,11.9,8.4,7.9,1.3,1.3,10.1,18.2,11.2,6.7,17.8,5.3,1.8,7.1,https://www.sports-reference.com/cbb/players/corey-kispert-1.html
-Trey Murphy III,2020-21,25,739,20.9,.670,.628,.215,2.8,11.7,7.6,8.2,1.8,1.8,8.3,18.4,2.5,0.9,3.5,6.0,2.4,8.4,https://www.sports-reference.com/cbb/players/trey-murphyiii-1.html
-Tre Mann,2020-21,53,1293,15.7,.534,.427,.262,2.3,14.4,8.7,16.1,2.2,0.4,16.5,23.9,2.1,1.8,3.9,2.0,1.9,3.9,https://www.sports-reference.com/cbb/players/tre-mann-1.html
-Kai Jones,2020-21,53,1044,17.7,.618,.265,.438,8.9,14.4,11.7,4.9,2.0,5.3,18.2,15.8,2.0,2.0,4.0,2.3,4.0,6.2,https://www.sports-reference.com/cbb/players/kai-jones-1.html
-Jalen Johnson,2020-21,13,278,25.7,.575,.165,.349,8.3,25.2,16.6,20.5,3.1,6.0,20.6,28.6,0.6,0.5,1.1,4.3,4.2,8.5,https://www.sports-reference.com/cbb/players/jalen-johnson-24.html
-Keon Johnson,2020-21,27,688,16.3,.519,.194,.409,4.8,11.0,7.9,20.7,2.5,2.0,19.4,26.8,0.7,1.4,2.1,1.0,3.1,4.1,https://www.sports-reference.com/cbb/players/keon-johnson-2.html
-Isaiah Jackson,2020-21,25,519,25.3,.587,.015,.657,11.2,23.3,17.3,7.4,2.1,12.7,17.5,20.5,1.2,1.2,2.4,2.3,6.0,8.3,https://www.sports-reference.com/cbb/players/isaiah-jackson-3.html
-Josh Christopher,2020-21,15,446,17.8,.529,.335,.313,2.4,16.1,9.0,9.8,2.7,1.9,11.4,25.5,0.6,0.5,1.1,2.4,1.8,4.2,https://www.sports-reference.com/cbb/players/josh-christopher-1.html
-Quentin Grimes,2020-21,60,1822,20.4,.551,.529,.303,4.1,13.1,8.5,15.4,2.2,1.0,13.3,25.5,5.4,3.9,9.3,5.4,2.4,7.8,https://www.sports-reference.com/cbb/players/quentin-grimes-1.html
-Bones Hyland,2020-21,55,1404,21.1,.588,.580,.233,1.2,13.8,7.7,17.4,3.0,1.1,14.8,27.4,3.5,2.9,6.3,4.8,2.4,7.1,https://www.sports-reference.com/cbb/players/nahshon-hyland-1.html
-Cameron Thomas,2020-21,29,986,24.0,.553,.418,.440,2.0,8.2,5.2,8.3,1.4,0.7,7.5,31.6,4.0,0.5,4.5,7.1,-0.8,6.3,https://www.sports-reference.com/cbb/players/cameron-thomas-1.html
-Jaden Springer,2020-21,25,648,20.9,.570,.203,.441,4.6,10.9,7.8,24.1,2.7,2.0,17.9,26.0,1.6,1.3,2.9,3.6,3.3,6.9,https://www.sports-reference.com/cbb/players/jaden-springer-1.html
-Day'Ron Sharpe,2020-21,29,556,25.4,.521,.009,.468,18.1,23.8,20.9,15.4,2.3,5.1,17.8,26.3,1.1,1.2,2.3,4.3,3.2,7.5,https://www.sports-reference.com/cbb/players/dayron-sharpe-1.html
-Santi Aldama,2020-21,27,899,25.8,.567,.371,.301,6.0,26.0,16.1,15.5,1.7,5.8,14.7,29.7,2.2,1.6,3.8,4.4,0.9,5.3,https://www.sports-reference.com/cbb/players/santi-aldama-1.html
-Jeremiah Robinson-Earl,2020-21,56,1875,20.5,.556,.260,.323,8.9,22.4,15.7,12.3,1.9,1.9,14.3,21.3,4.6,3.3,7.8,3.8,2.6,6.4,https://www.sports-reference.com/cbb/players/jeremiah-robinson-earl-1.html
-Jason Preston,2020-21,82,2795,19.5,.568,.274,.263,2.7,16.1,9.4,34.0,2.0,0.4,19.2,20.1,6.7,3.6,10.3,2.5,1.0,3.5,https://www.sports-reference.com/cbb/players/jason-preston-1.html
-Herb Jones,2020-21,129,3076,14.4,.496,.153,.501,7.0,14.5,10.9,16.9,3.0,3.2,21.8,18.9,2.2,5.6,7.9,-0.1,4.2,4.1,https://www.sports-reference.com/cbb/players/herb-jones-3.html
-Miles McBride,2020-21,60,1679,20.6,.525,.307,.346,3.2,9.3,6.1,23.9,3.1,1.7,11.6,23.0,4.8,2.8,7.6,5.3,3.8,9.1,https://www.sports-reference.com/cbb/players/miles-mcbride-1.html
-JT Thor,2020-21,27,622,18.2,.547,.387,.445,7.7,15.4,11.7,7.1,1.9,5.9,15.4,20.4,1.2,0.8,2.0,2.5,2.2,4.7,https://www.sports-reference.com/cbb/players/jt-thor-1.html
-Ayo Dosunmu,2020-21,90,2990,20.2,.548,.266,.281,2.8,13.7,8.3,24.2,1.9,0.7,15.2,26.7,7.3,4.2,11.5,4.8,2.0,6.9,https://www.sports-reference.com/cbb/players/ayo-dosunmu-1.html
-Neemias Queta,2020-21,86,2406,26.3,.612,.011,.512,10.4,25.3,18.2,15.0,1.5,10.8,19.1,23.5,6.2,6.9,13.1,3.3,5.1,8.4,https://www.sports-reference.com/cbb/players/neemias-queta-1.html
-Jared Butler,2020-21,94,2731,20.2,.560,.522,.232,2.1,10.9,6.4,23.7,3.0,0.7,15.9,25.7,7.6,4.9,12.5,5.1,3.1,8.2,https://www.sports-reference.com/cbb/players/jared-butler-1.html
-Joe Wieskamp,2020-21,97,2885,20.0,.601,.485,.337,5.1,16.1,10.7,9.0,1.8,1.6,10.9,20.4,8.0,3.3,11.3,5.9,1.5,7.4,https://www.sports-reference.com/cbb/players/joe-wieskamp-1.html
-Isaiah Livers,2020-21,119,2785,17.2,.604,.535,.206,4.6,13.9,9.5,7.3,1.3,2.2,9.9,17.3,6.5,5.2,11.7,4.2,3.6,7.8,https://www.sports-reference.com/cbb/players/isaiah-livers-1.html
-Greg Brown III,2020-21,26,535,15.9,.535,.472,.373,6.7,26.0,16.8,3.8,1.6,5.0,20.9,26.9,0.3,1.2,1.5,-0.2,2.7,2.5,https://www.sports-reference.com/cbb/players/greg-brown-9.html
-Kessler Edwards,2020-21,92,2909,19.7,.587,.420,.309,6.1,18.0,12.0,7.6,1.8,4.8,12.0,20.2,6.6,3.7,10.3,3.5,0.8,4.3,https://www.sports-reference.com/cbb/players/kessler-edwards-1.html
-Dalano Banton,2020-21,27,736,16.0,.495,.370,.402,3.9,18.9,11.4,28.8,1.9,4.0,20.4,21.8,0.6,1.1,1.7,1.6,3.0,4.7,https://www.sports-reference.com/cbb/players/dalano-banton-1.html
-David Johnson,2020-21,46,1099,15.7,.512,.292,.220,4.9,14.0,9.6,25.5,2.1,1.3,21.8,24.1,1.1,1.8,3.0,2.2,2.5,4.7,https://www.sports-reference.com/cbb/players/david-johnson-13.html
-Sharife Cooper,2020-21,12,397,22.9,.519,.310,.560,2.2,11.3,6.9,51.9,1.6,0.7,17.7,33.1,1.4,0.3,1.7,4.7,-0.4,4.3,https://www.sports-reference.com/cbb/players/sharife-cooper-1.html
-Marcus Zegarowski,2020-21,92,2962,19.3,.604,.524,.222,1.2,10.7,6.2,24.3,2.0,0.2,15.7,22.0,8.2,3.5,11.7,4.6,1.5,6.0,https://www.sports-reference.com/cbb/players/marcus-zegarowski-1.html
-Brandon Boston Jr.,2020-21,25,759,13.2,.447,.345,.224,4.8,11.2,8.0,11.1,2.5,0.5,10.1,23.0,0.7,1.0,1.6,1.0,2.1,3.1,https://www.sports-reference.com/cbb/players/brandon-bostonjr-1.html
-Luka Garza,2020-21,127,3440,30.5,.608,.205,.399,11.2,18.3,14.9,10.0,1.1,4.7,8.7,29.5,15.4,4.1,19.5,8.8,0.8,9.6,https://www.sports-reference.com/cbb/players/luka-garza-1.html
-Charles Bassey,2020-21,72,2199,28.8,.648,.124,.416,12.0,27.1,19.9,6.0,1.2,9.4,17.1,24.5,7.0,4.9,11.9,4.4,2.2,6.6,https://www.sports-reference.com/cbb/players/charles-bassey-1.html
-Sandro Mamukelashvili,2020-21,115,2802,18.2,.542,.340,.336,7.9,18.4,13.2,13.6,1.4,3.3,15.1,21.4,5.2,4.0,9.2,3.3,1.9,5.2,https://www.sports-reference.com/cbb/players/sandro-mamukelashvili-1.html
-Aaron Wiggins,2020-21,96,2707,16.3,.525,.517,.183,4.6,13.9,9.5,11.9,1.9,1.5,12.1,22.3,4.5,4.2,8.7,3.6,2.5,6.1,https://www.sports-reference.com/cbb/players/aaron-wiggins-1.html
-Scottie Lewis,2020-21,51,1410,15.3,.551,.332,.434,4.2,10.3,7.3,7.0,2.9,4.6,16.1,16.6,2.0,2.2,4.3,2.1,4.1,6.3,https://www.sports-reference.com/cbb/players/scottie-lewis-1.html
-Balša Koprivica,2020-21,51,746,24.8,.648,.005,.450,13.5,17.5,15.6,7.0,1.2,6.2,15.5,20.9,2.6,1.3,3.9,3.4,2.5,5.9,https://www.sports-reference.com/cbb/players/balsa-koprivica-1.html
-Jericho Sims,2020-21,119,2441,18.2,.621,.002,.525,10.0,20.3,15.2,4.2,1.2,4.0,17.9,16.4,4.5,4.5,9.0,1.7,3.0,4.6,https://www.sports-reference.com/cbb/players/jericho-sims-1.html
-RaiQuan Gray,2020-21,90,1664,17.1,.535,.217,.432,6.5,17.8,12.4,13.6,3.1,3.1,19.6,21.1,2.4,3.5,5.8,1.2,4.2,5.4,https://www.sports-reference.com/cbb/players/raiquan-gray-1.html
-Jalen Green,2020-21,15,480,15.3,.613,.417,.172,1.9,11.6,6.9,13.5,2.3,0.8,15.4,23.4,0.0,0.5,0.4,1.2,4.2,5.4,
-Jonathan Kuminga,2020-21,13,426,11.5,.497,.349,.258,4.0,19.2,11.9,12.2,1.5,2.4,14.1,24.5,-0.7,0.5,-0.3,1.2,4.2,5.4,
-Isaiah Todd,2020-21,15,366,12.2,.530,.281,.102,3.7,17.5,10.8,5.1,0.9,2.8,11.6,23.3,-0.3,0.3,0.0,1.2,4.2,5.4,
+player_id,name,season,school_name,g,gs,mp,per,ts_pct,fg3a_per_fga_pct,fta_per_fga_pct,orb_pct,drb_pct,trb_pct,ast_pct,stl_pct,blk_pct,tov_pct,usg_pct,ows,dws,ws,obpm,dbpm,bpm,uni_url
+cade-cunningham-1,Cade Cunningham,2020-2021,Oklahoma State,27,26,956,21.6,.574,.388,.390,2.3,16.3,9.6,20.4,2.5,2.3,18.7,29.1,2.3,1.7,4.0,5.1,3.2,8.3,https://www.sports-reference.com/cbb/players/cade-cunningham-1.html
+evan-mobley-1,Evan Mobley,2020-2021,USC,33,33,1120,29.1,.624,.117,.566,9.6,18.9,14.5,14.1,1.4,8.8,14.6,22.8,4.3,2.6,6.9,7.9,5.8,13.7,https://www.sports-reference.com/cbb/players/evan-mobley-1.html
+scottie-barnes-1,Scottie Barnes,2020-2021,Florida State,24,7,595,21.4,.548,.205,.338,7.4,11.1,9.3,31.6,3.4,2.1,20.7,23.7,1.5,1.0,2.4,4.3,3.6,7.9,https://www.sports-reference.com/cbb/players/scottie-barnes-1.html
+jalen-suggs-1,Jalen Suggs,2020-2021,Gonzaga,30,30,868,22.6,.595,.338,.370,2.7,18.0,11.0,23.7,3.5,1.1,19.5,24.8,2.5,2.1,4.6,4.8,4.6,9.4,https://www.sports-reference.com/cbb/players/jalen-suggs-1.html
+franz-wagner-1,Franz Wagner,2020-2021,Michigan,55,55,1718,19.5,.577,.459,.261,3.2,18.3,11.2,11.8,2.3,2.5,11.7,19.7,4.0,3.4,7.5,4.4,5.0,9.4,https://www.sports-reference.com/cbb/players/franz-wagner-1.html
+davion-mitchell-1,Davion Mitchell,2020-2021,Baylor,60,60,1963,17.6,.565,.435,.254,1.4,8.3,4.8,25.0,3.0,1.3,18.1,19.5,4.7,3.8,8.5,3.5,3.9,7.4,https://www.sports-reference.com/cbb/players/davion-mitchell-1.html
+ziaire-williams-1,Ziaire Williams,2020-2021,Stanford,20,14,558,11.1,.473,.389,.241,2.4,16.4,9.9,16.4,1.7,2.2,20.4,26.5,-0.2,0.9,0.6,-1.2,1.5,0.3,https://www.sports-reference.com/cbb/players/ziaire-williams-1.html
+james-bouknight-1,James Bouknight,2020-2021,UConn,43,30,1200,21.2,.554,.296,.367,6.2,12.8,9.4,12.0,1.9,0.9,13.6,27.8,3.3,1.9,5.2,4.9,1.6,6.5,https://www.sports-reference.com/cbb/players/james-bouknight-1.html
+joshua-primo-1,Joshua Primo,2020-2021,Alabama,30,19,674,13.2,.565,.579,.226,4.7,10.5,7.6,6.5,1.4,1.3,16.0,17.6,1.0,1.1,2.1,1.6,2.1,3.7,https://www.sports-reference.com/cbb/players/joshua-primo-1.html
+chris-duarte-1,Chris Duarte,2020-2021,Oregon,54,54,1730,23.9,.593,.469,.260,4.4,15.1,9.9,13.2,3.4,2.5,13.1,23.8,5.4,2.8,8.2,6.8,3.1,9.9,https://www.sports-reference.com/cbb/players/chris-duarte-1.html
+moses-moody-1,Moses Moody,2020-2021,Arkansas,32,32,1082,20.4,.568,.420,.482,6.3,11.8,9.0,8.2,1.6,2.0,9.9,22.3,3.4,1.8,5.2,5.2,2.3,7.4,https://www.sports-reference.com/cbb/players/moses-moody-1.html
+corey-kispert-1,Corey Kispert,2020-2021,Gonzaga,137,108,3755,18.5,.626,.576,.218,4.3,11.9,8.4,7.9,1.3,1.3,10.1,18.2,11.2,6.7,17.8,5.3,1.8,7.1,https://www.sports-reference.com/cbb/players/corey-kispert-1.html
+trey-murphyiii-1,Trey Murphy III,2020-2021,Virginia,25,20,739,20.9,.670,.628,.215,2.8,11.7,7.6,8.2,1.8,1.8,8.3,18.4,2.5,0.9,3.5,6.0,2.4,8.4,https://www.sports-reference.com/cbb/players/trey-murphyiii-1.html
+tre-mann-1,Tre Mann,2020-2021,Florida,53,28,1293,15.7,.534,.427,.262,2.3,14.4,8.7,16.1,2.2,0.4,16.5,23.9,2.1,1.8,3.9,2.0,1.9,3.9,https://www.sports-reference.com/cbb/players/tre-mann-1.html
+kai-jones-1,Kai Jones,2020-2021,Texas,53,14,1044,17.7,.618,.265,.438,8.9,14.4,11.7,4.9,2.0,5.3,18.2,15.8,2.0,2.0,4.0,2.3,4.0,6.2,https://www.sports-reference.com/cbb/players/kai-jones-1.html
+jalen-johnson-24,Jalen Johnson,2020-2021,Duke,13,8,278,25.7,.575,.165,.349,8.3,25.2,16.6,20.5,3.1,6.0,20.6,28.6,0.6,0.5,1.1,4.3,4.2,8.5,https://www.sports-reference.com/cbb/players/jalen-johnson-24.html
+keon-johnson-2,Keon Johnson,2020-2021,Tennessee,27,17,688,16.3,.519,.194,.409,4.8,11.0,7.9,20.7,2.5,2.0,19.4,26.8,0.7,1.4,2.1,1.0,3.1,4.1,https://www.sports-reference.com/cbb/players/keon-johnson-2.html
+isaiah-jackson-3,Isaiah Jackson,2020-2021,Kentucky,25,18,519,25.3,.587,.015,.657,11.2,23.3,17.3,7.4,2.1,12.7,17.5,20.5,1.2,1.2,2.4,2.3,6.0,8.3,https://www.sports-reference.com/cbb/players/isaiah-jackson-3.html
+josh-christopher-1,Josh Christopher,2020-2021,Arizona State,15,15,446,17.8,.529,.335,.313,2.4,16.1,9.0,9.8,2.7,1.9,11.4,25.5,0.6,0.5,1.1,2.4,1.8,4.2,https://www.sports-reference.com/cbb/players/josh-christopher-1.html
+quentin-grimes-1,Quentin Grimes,2020-2021,Houston,60,51,1822,20.4,.551,.529,.303,4.1,13.1,8.5,15.4,2.2,1.0,13.3,25.5,5.4,3.9,9.3,5.4,2.4,7.8,https://www.sports-reference.com/cbb/players/quentin-grimes-1.html
+nahshon-hyland-1,Bones Hyland,2020-2021,VCU,55,33,1404,21.1,.588,.580,.233,1.2,13.8,7.7,17.4,3.0,1.1,14.8,27.4,3.5,2.9,6.3,4.8,2.4,7.1,https://www.sports-reference.com/cbb/players/nahshon-hyland-1.html
+cameron-thomas-1,Cameron Thomas,2020-2021,LSU,29,29,986,24.0,.553,.418,.440,2.0,8.2,5.2,8.3,1.4,0.7,7.5,31.6,4.0,0.5,4.5,7.1,-0.8,6.3,https://www.sports-reference.com/cbb/players/cameron-thomas-1.html
+jaden-springer-1,Jaden Springer,2020-2021,Tennessee,25,15,648,20.9,.570,.203,.441,4.6,10.9,7.8,24.1,2.7,2.0,17.9,26.0,1.6,1.3,2.9,3.6,3.3,6.9,https://www.sports-reference.com/cbb/players/jaden-springer-1.html
+dayron-sharpe-1,Day'Ron Sharpe,2020-2021,UNC,29,4,556,25.4,.521,.009,.468,18.1,23.8,20.9,15.4,2.3,5.1,17.8,26.3,1.1,1.2,2.3,4.3,3.2,7.5,https://www.sports-reference.com/cbb/players/dayron-sharpe-1.html
+santi-aldama-1,Santi Aldama,2020-2021,Loyola (MD),27,26,899,25.8,.567,.371,.301,6.0,26.0,16.1,15.5,1.7,5.8,14.7,29.7,2.2,1.6,3.8,4.4,0.9,5.3,https://www.sports-reference.com/cbb/players/santi-aldama-1.html
+jeremiah-robinson-earl-1,Jeremiah Robinson-Earl,2020-2021,Villanova,56,56,1875,20.5,.556,.260,.323,8.9,22.4,15.7,12.3,1.9,1.9,14.3,21.3,4.6,3.3,7.8,3.8,2.6,6.4,https://www.sports-reference.com/cbb/players/jeremiah-robinson-earl-1.html
+jason-preston-1,Jason Preston,2020-2021,Ohio,82,73,2795,19.5,.568,.274,.263,2.7,16.1,9.4,34.0,2.0,0.4,19.2,20.1,6.7,3.6,10.3,2.5,1.0,3.5,https://www.sports-reference.com/cbb/players/jason-preston-1.html
+herb-jones-3,Herb Jones,2020-2021,Alabama,129,101,3076,14.4,.496,.153,.501,7.0,14.5,10.9,16.9,3.0,3.2,21.8,18.9,2.2,5.6,7.9,-0.1,4.2,4.1,https://www.sports-reference.com/cbb/players/herb-jones-3.html
+miles-mcbride-1,Miles McBride,2020-2021,West Virginia,60,30,1679,20.6,.525,.307,.346,3.2,9.3,6.1,23.9,3.1,1.7,11.6,23.0,4.8,2.8,7.6,5.3,3.8,9.1,https://www.sports-reference.com/cbb/players/miles-mcbride-1.html
+jt-thor-1,JT Thor,2020-2021,Auburn,27,27,622,18.2,.547,.387,.445,7.7,15.4,11.7,7.1,1.9,5.9,15.4,20.4,1.2,0.8,2.0,2.5,2.2,4.7,https://www.sports-reference.com/cbb/players/jt-thor-1.html
+ayo-dosunmu-1,Ayo Dosunmu,2020-2021,Illinois,90,90,2990,20.2,.548,.266,.281,2.8,13.7,8.3,24.2,1.9,0.7,15.2,26.7,7.3,4.2,11.5,4.8,2.0,6.9,https://www.sports-reference.com/cbb/players/ayo-dosunmu-1.html
+neemias-queta-1,Neemias Queta,2020-2021,Utah State,86,84,2406,26.3,.612,.011,.512,10.4,25.3,18.2,15.0,1.5,10.8,19.1,23.5,6.2,6.9,13.1,3.3,5.1,8.4,https://www.sports-reference.com/cbb/players/neemias-queta-1.html
+jared-butler-1,Jared Butler,2020-2021,Baylor,94,81,2731,20.2,.560,.522,.232,2.1,10.9,6.4,23.7,3.0,0.7,15.9,25.7,7.6,4.9,12.5,5.1,3.1,8.2,https://www.sports-reference.com/cbb/players/jared-butler-1.html
+joe-wieskamp-1,Joe Wieskamp,2020-2021,Iowa,97,97,2885,20.0,.601,.485,.337,5.1,16.1,10.7,9.0,1.8,1.6,10.9,20.4,8.0,3.3,11.3,5.9,1.5,7.4,https://www.sports-reference.com/cbb/players/joe-wieskamp-1.html
+isaiah-livers-1,Isaiah Livers,2020-2021,Michigan,119,69,2785,17.2,.604,.535,.206,4.6,13.9,9.5,7.3,1.3,2.2,9.9,17.3,6.5,5.2,11.7,4.2,3.6,7.8,https://www.sports-reference.com/cbb/players/isaiah-livers-1.html
+greg-brown-9,Greg Brown III,2020-2021,Texas,26,24,535,15.9,.535,.472,.373,6.7,26.0,16.8,3.8,1.6,5.0,20.9,26.9,0.3,1.2,1.5,-0.2,2.7,2.5,https://www.sports-reference.com/cbb/players/greg-brown-9.html
+kessler-edwards-1,Kessler Edwards,2020-2021,Pepperdine,92,84,2909,19.7,.587,.420,.309,6.1,18.0,12.0,7.6,1.8,4.8,12.0,20.2,6.6,3.7,10.3,3.5,0.8,4.3,https://www.sports-reference.com/cbb/players/kessler-edwards-1.html
+dalano-banton-1,Dalano Banton,2020-2021,Nebraska,27,22,736,16.0,.495,.370,.402,3.9,18.9,11.4,28.8,1.9,4.0,20.4,21.8,0.6,1.1,1.7,1.6,3.0,4.7,https://www.sports-reference.com/cbb/players/dalano-banton-1.html
+david-johnson-13,David Johnson,2020-2021,Louisville,46,23,1099,15.7,.512,.292,.220,4.9,14.0,9.6,25.5,2.1,1.3,21.8,24.1,1.1,1.8,3.0,2.2,2.5,4.7,https://www.sports-reference.com/cbb/players/david-johnson-13.html
+sharife-cooper-1,Sharife Cooper,2020-2021,Auburn,12,12,397,22.9,.519,.310,.560,2.2,11.3,6.9,51.9,1.6,0.7,17.7,33.1,1.4,0.3,1.7,4.7,-0.4,4.3,https://www.sports-reference.com/cbb/players/sharife-cooper-1.html
+marcus-zegarowski-1,Marcus Zegarowski,2020-2021,Creighton,92,75,2962,19.3,.604,.524,.222,1.2,10.7,6.2,24.3,2.0,0.2,15.7,22.0,8.2,3.5,11.7,4.6,1.5,6.0,https://www.sports-reference.com/cbb/players/marcus-zegarowski-1.html
+brandon-bostonjr-1,Brandon Boston Jr.,2020-2021,Kentucky,25,24,759,13.2,.447,.345,.224,4.8,11.2,8.0,11.1,2.5,0.5,10.1,23.0,0.7,1.0,1.6,1.0,2.1,3.1,https://www.sports-reference.com/cbb/players/brandon-bostonjr-1.html
+luka-garza-1,Luka Garza,2020-2021,Iowa,127,118,3440,30.5,.608,.205,.399,11.2,18.3,14.9,10.0,1.1,4.7,8.7,29.5,15.4,4.1,19.5,8.8,0.8,9.6,https://www.sports-reference.com/cbb/players/luka-garza-1.html
+charles-bassey-1,Charles Bassey,2020-2021,Western Kentucky,72,72,2199,28.8,.648,.124,.416,12.0,27.1,19.9,6.0,1.2,9.4,17.1,24.5,7.0,4.9,11.9,4.4,2.2,6.6,https://www.sports-reference.com/cbb/players/charles-bassey-1.html
+sandro-mamukelashvili-1,Sandro Mamukelashvili,2020-2021,Seton Hall,115,79,2802,18.2,.542,.340,.336,7.9,18.4,13.2,13.6,1.4,3.3,15.1,21.4,5.2,4.0,9.2,3.3,1.9,5.2,https://www.sports-reference.com/cbb/players/sandro-mamukelashvili-1.html
+aaron-wiggins-1,Aaron Wiggins,2020-2021,Maryland,96,50,2707,16.3,.525,.517,.183,4.6,13.9,9.5,11.9,1.9,1.5,12.1,22.3,4.5,4.2,8.7,3.6,2.5,6.1,https://www.sports-reference.com/cbb/players/aaron-wiggins-1.html
+scottie-lewis-1,Scottie Lewis,2020-2021,Florida,51,31,1410,15.3,.551,.332,.434,4.2,10.3,7.3,7.0,2.9,4.6,16.1,16.6,2.0,2.2,4.3,2.1,4.1,6.3,https://www.sports-reference.com/cbb/players/scottie-lewis-1.html
+balsa-koprivica-1,Balša Koprivica,2020-2021,Florida State,51,20,746,24.8,.648,.005,.450,13.5,17.5,15.6,7.0,1.2,6.2,15.5,20.9,2.6,1.3,3.9,3.4,2.5,5.9,https://www.sports-reference.com/cbb/players/balsa-koprivica-1.html
+jericho-sims-1,Jericho Sims,2020-2021,Texas,119,77,2441,18.2,.621,.002,.525,10.0,20.3,15.2,4.2,1.2,4.0,17.9,16.4,4.5,4.5,9.0,1.7,3.0,4.6,https://www.sports-reference.com/cbb/players/jericho-sims-1.html
+raiquan-gray-1,RaiQuan Gray,2020-2021,Florida State,90,52,1664,17.1,.535,.217,.432,6.5,17.8,12.4,13.6,3.1,3.1,19.6,21.1,2.4,3.5,5.8,1.2,4.2,5.4,https://www.sports-reference.com/cbb/players/raiquan-gray-1.html
