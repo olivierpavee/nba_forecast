@@ -9,7 +9,7 @@ def get_model(model_type):
         model = Ridge(
                     alpha = 1.2,
                     solver ='sag',
-                    tol = 0
+                    tol = 0.1
                     )
 
     elif model_type == 'model_def':
