@@ -65,7 +65,7 @@ if st.session_state.team_nba not in ['2021 (Choose a team!)','2011 (Choose a tea
     #st.write(team_row_df)
     team_value = team_row_df.values.tolist()[0][:-1]
     team_label = team_row_df.columns.tolist()[:-1]
-    st.markdown('<center><h2 class="blue bold_2">Team performances</h2></center>', unsafe_allow_html=True)
+    st.markdown('<center><h2 class="blue bold_2 lobs">Team performances</h2></center>', unsafe_allow_html=True)
     fig_plotly = px.line_polar(team_row_df, r=team_value, theta=team_label, line_close=True)
     fig_plotly.update_traces(fill='toself')
     fig_plotly.update_layout(
