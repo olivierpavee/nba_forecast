@@ -52,9 +52,68 @@ def reco_by_pos(year, team, pos):
     team_off_rating = team_stats_list[1]
     team_def_rating = team_stats_list[2]
 
-    #retrieve dataframe of NBA players to be drafted that year
-    # player_file = 
-    pass
+    #retrieve dataframe of NBA players to be drafted that year 
+    player_file = 'dataset_' + str(year) + '.csv'                               #TO BE REVIEWED
+    players_df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/{player_file}") #TO BE REVIEWED
+
+    print(players_df.head())
+
+    #retrieve models
+    model_off = joblib.load('model_off.joblib')
+    model_def = joblib.load('model_def.joblib')
+    model_risk = joblib.load('model_risk.joblib')
+
+    #define features for each model
+    off_features = ['mp', 'gs_pct', 'last_uni_age', 'pos', 'per','ts_pct','fg3a_per_fga_pct','fta_per_fga_pct',\
+                    'orb_pct','ast_pct','tov_pct','usg_pct','ows','obpm']
+
+    def_features = ['mp', 'gs_pct', 'last_uni_age', 'pos', 'stl_pct','blk_pct','dws','drb_pct','dbpm']
+
+    athletics_features = [  'body_fat_pct', 'hand_length', 'hand_width', 'height_wo_shoes',\
+                            'height_w_shoes', 'standing_reach', 'weight', 'wingspan']
+    
+    risk_features = [ 'mp','per','ts_pct','fg3a_per_fga_pct','fta_per_fga_pct',
+          'orb_pct','drb_pct','ast_pct','stl_pct','blk_pct','tov_pct','usg_pct','ows','dws','obpm','dbpm','years']
+
+    #convert features to meet pipelines requirements
+    to_be_converted = [ 'gs_pct','mp','last_uni_age','hand_length','hand_width',\
+                            'height_w_shoes','height_wo_shoes','standing_reach','wingspan']
+    for column in to_be_converted:
+        players_df[column] = players_df[column].astype('float64')
+
+    
+    #get models predictions for all dataset
+    ratio_off_preds = model_off.predict(players_df[off_features+athletics_features])
+
+    ratio_def_preds = model_def.predict(pd.get_dummies(players_df[def_features+athletics_features]))
+
+    risk_proba = model_risk.predict_proba(players_df[risk_features])
+    risk_proba = risk_proba[:,1:].reshape(-1)
+
+    #build dataframe with scores
+    displayed_features = ['player_name','school_name','uni_off_score','uni_def_score','height_w_shoes','weight', 'pos', 'years']
+    final_df = players_df[displayed_features]
+
+    #intermediate columns for fit score computation (dropped at the end of treatment)
+    final_df['ratio_off_preds'] = ratio_off_preds
+    final_df['ratio_def_preds'] = ratio_def_preds
+    final_df['risk_proba'] = risk_proba
+
+    #compute fit score
+    final_df['fit_score']=( final_df['ratio_off_preds'] * final_df['uni_off_score'] * team_off_rating\
+                        + final_df['ratio_def_preds'] * final_df['uni_def_score'] * team_def_rating )\
+                             * final_df['risk_proba'] / (final_df['years']**(1/3))
+
+    #keep only desired position
+    final_df = final_df[final_df['pos'] == str(pos)]
+    # print(final_df[['player_name','ratio_off_preds','ratio_def_preds','risk_proba','fit_score']].sort_values(by='fit_score',ascending=False))
+
+    #drop columns we don't need anymore and keep top five
+    final_df = final_df.drop(columns=['ratio_off_preds', 'ratio_def_preds', 'years']).sort_values(by='fit_score', ascending=False).head(5)
+
+    # print(final_df.to_dict('records'))
+    # print(len(final_df.to_dict('records')))
+    return final_df.to_dict('records')
 
 if __name__ == "__main__":
-    reco_by_pos(2011,'BOS','C')
+    reco_by_pos(2011,'BOS','SF')

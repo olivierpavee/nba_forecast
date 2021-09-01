@@ -41,7 +41,6 @@ class Trainer():
                 ('rob_scaler', RobustScaler()),
                 ('random_forest',self.model)
             ])
-
         #PIPELINE MODELE OFF
         elif self.model_type == 'model_off':
             preproc_categorical = Pipeline([

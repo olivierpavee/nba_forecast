@@ -39,7 +39,7 @@ def filter_data(df,type):
     athletics_features = [  'body_fat_pct', 'hand_length', 'hand_width', 'height_wo_shoes',\
                             'height_w_shoes', 'standing_reach', 'weight', 'wingspan']
     
-    risk_features = [ 'mp','per','ts_pct','efg_pct','fg3a_per_fga_pct','fta_per_fga_pct',
+    risk_features = [ 'mp','per','ts_pct','fg3a_per_fga_pct','fta_per_fga_pct',
           'orb_pct','drb_pct','ast_pct','stl_pct','blk_pct','tov_pct','usg_pct','ows','dws','obpm','dbpm','years']
 
     if type == 'model_off':
@@ -57,7 +57,7 @@ def filter_data(df,type):
     elif type == 'model_def':
         #return dataset with defensive and atheltics features (discard offensive features)
         df_def = df[def_features+athletics_features].copy()
-        df_def = pd.get_dummies(df)
+        df_def = pd.get_dummies(df[def_features+athletics_features])
         return df_def
     
     elif type == 'model_risk':
