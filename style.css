@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 .highlight {
   border-radius: 0.4rem;
   color: white;
@@ -28,4 +29,80 @@
 }
 .black {
   background-color: black;
+}
+.dp_class {
+  background-color: #fc3153;
+  text-align: center;
+}
+/* h1 {
+  font-size: 60pt;
+  font-family: 'Luckiest Guy';
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow:   0px -6px 0 #212121,
+                 0px -6px 0 #212121,
+                 0px  6px 0 #212121,
+                 0px  6px 0 #212121,
+                -6px  0px 0 #212121,
+                 6px  0px 0 #212121,
+                -6px  0px 0 #212121,
+                 6px  0px 0 #212121,
+                -6px -6px 0 #212121,
+                 6px -6px 0 #212121,
+                -6px  6px 0 #212121,
+                 6px  6px 0 #212121,
+                -6px  18px 0 #212121,
+                 0px  18px 0 #212121,
+                 6px  18px 0 #212121,
+                 0 19px 1px rgba(0,0,0,.1),
+                 0 0 6px rgba(0,0,0,.1),
+                 0 6px 3px rgba(0,0,0,.3),
+                 0 12px 6px rgba(0,0,0,.2),
+                 0 18px 18px rgba(0,0,0,.25),
+                 0 24px 24px rgba(0,0,0,.2),
+                 0 36px 36px rgba(0,0,0,.15);
+} */
+
+
+
+/* body {
+  background: #A0CBA4;
+  font-family: 'Lobster', cursive;
+} */
+.circle {
+  margin: auto;
+  height: 220px;
+  width: 220px;
+  border-radius: 100%;
+  background: #4E8953;
+  margin-top: 150px;
+  box-shadow: inset 0px 0px 10px 10px goldenrod;
+}
+
+/* h1 {
+  /* color: #D5E2D6; */
+  /* color: black;
+  text-align: center;
+  line-height: 50px;
+  margin-top: -350px;
+  -moz-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+  -webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+  -o-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+  -ms-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+  transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+  /*-----------------------*/
+  /* text-shadow: 1px 1px #4A744D, 2px 2px #4A744D, 3px 3px #4A744D, 4px 4px #4A744D, 5px 5px #4A744D, 6px 6px #4A744D, 7px 7px #4A744D, 8px 8px #4A744D, 9px 9px #4A744D, 10px 10px #4A744D, 11px 11px #4A744D, 12px 12px #4A744D, 13px 13px #4A744D, 14px 14px #4A744D, 15px 15px #4A744D, 16px 16px #4A744D, 17px 17px #4A744D, 18px 18px #4A744D, 19px 19px #4A744D, 20px 20px #4A744D, 21px 21px #4A744D, 22px 22px #4A744D, 23px 23px #4A744D, 24px 24px #4A744D, 25px 25px #4A744D, 26px 26px 6px #06520C;
+  font-family: 'Lobster', cursive; */
+/* } */
+
+h1{
+  font-family: 'Lobster', cursive;
+}
+.pred {
+font-size: 60px;
+}
+
+.delphes  {
+  font-size: 110px;
 }
