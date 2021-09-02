@@ -1,9 +1,11 @@
+from pandas.core.dtypes.missing import isna
 import streamlit as st
 from nba_forecast.data import get_data_using_pandas
 from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 import joblib
 import os
+import math
 
 CURRENT_PATH = os.getcwd()
 
@@ -39,30 +41,30 @@ def get_stat_team(team_name, year_draft):
         row = scaled_df[scaled_df['Team'] == team_name]
         return row
 
-def reco_by_pos(year, team, pos):
+def get_teams(year):
     #retrieve file referencing NBA teams with their statistics of given year
     team_file = 'team_stats_' + str(year) + '.csv'
-    teams_df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/{team_file}")
+    return pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/{team_file}")
 
-    #fetch stats of the team we are interested in
-    team_stats = teams_df.loc[teams_df['Team'] == team]
-    print(team_stats)
-    print(team_stats.values.flatten().tolist())
-    team_stats_list = team_stats.values.flatten().tolist()
-    team_off_rating = team_stats_list[1]
-    team_def_rating = team_stats_list[2]
-
+def get_players(year):
     #retrieve dataframe of NBA players to be drafted that year 
-    player_file = 'dataset_' + str(year) + '.csv'                               #TO BE REVIEWED
-    players_df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/{player_file}") #TO BE REVIEWED
+    player_file = 'dataset_' + str(year) + '.csv'                               
+    return pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/{player_file}") 
 
-    print(players_df.head())
 
-    #retrieve models
-    model_off = joblib.load('model_off.joblib')
-    model_def = joblib.load('model_def.joblib')
-    model_risk = joblib.load('model_risk.joblib')
+def get_team_ratings(df,team):
+    #fetch stats of the team we are interested in
+    team_stats = df.loc[df['Team'] == team]
+    # print(team_stats)
+    # print(team_stats.values.flatten().tolist())
+    team_stats_list = team_stats.values.flatten().tolist()
 
+    # team_off_rating = team_stats_list[1]
+    # team_def_rating = team_stats_list[2]
+    return team_stats_list[1], team_stats_list[2]
+
+
+def split_dataframe(players_df):
     #define features for each model
     off_features = ['mp', 'gs_pct', 'last_uni_age', 'pos', 'per','ts_pct','fg3a_per_fga_pct','fta_per_fga_pct',\
                     'orb_pct','ast_pct','tov_pct','usg_pct','ows','obpm']
@@ -81,14 +83,35 @@ def reco_by_pos(year, team, pos):
     for column in to_be_converted:
         players_df[column] = players_df[column].astype('float64')
 
-    
+    off_df = players_df[off_features+athletics_features]
+    def_df = pd.get_dummies(players_df[def_features+athletics_features])
+    risk_df = players_df[risk_features]
+
+    return off_df, def_df, risk_df
+
+
+def reco_by_pos(year, team, pos='*'):
+    #retrieve file referencing NBA teams with their statistics of given year
+    teams_df = get_teams(year)
+    team_off_rating, team_def_rating = get_team_ratings(teams_df,team)
+
+    #fetch stats of the team we are interested in
+    players_df = get_players(year)
+    # print(players_df.head())
+
+    #retrieve models
+    model_off = joblib.load('model_off.joblib')
+    model_def = joblib.load('model_def.joblib')
+    model_risk = joblib.load('model_risk.joblib')
+
+    #get our three dataframes for predictions
+    off_df, def_df, risk_df = split_dataframe(players_df)
+
     #get models predictions for all dataset
-    ratio_off_preds = model_off.predict(players_df[off_features+athletics_features])
+    ratio_off_preds = model_off.predict(off_df)
+    ratio_def_preds = model_def.predict(def_df)
+    risk_proba = model_risk.predict_proba(risk_df)[:,1:].reshape(-1)
 
-    ratio_def_preds = model_def.predict(pd.get_dummies(players_df[def_features+athletics_features]))
-
-    risk_proba = model_risk.predict_proba(players_df[risk_features])
-    risk_proba = risk_proba[:,1:].reshape(-1)
 
     #build dataframe with scores
     displayed_features = ['player_name','school_name','uni_off_score','uni_def_score','height_w_shoes','weight', 'pos', 'years']
@@ -105,15 +128,83 @@ def reco_by_pos(year, team, pos):
                              * final_df['risk_proba'] / (final_df['years']**(1/3))
 
     #keep only desired position
-    final_df = final_df[final_df['pos'] == str(pos)]
-    # print(final_df[['player_name','ratio_off_preds','ratio_def_preds','risk_proba','fit_score']].sort_values(by='fit_score',ascending=False))
+    if pos != '*':
+        final_df = final_df[final_df['pos'] == str(pos)]
 
     #drop columns we don't need anymore and keep top five
     final_df = final_df.drop(columns=['ratio_off_preds', 'ratio_def_preds', 'years']).sort_values(by='fit_score', ascending=False).head(5)
 
-    # print(final_df.to_dict('records'))
-    # print(len(final_df.to_dict('records')))
+    print(final_df)
     return final_df.to_dict('records')
 
+def mock_draft(year):
+    pick_order_position=[('CLE','PG'), ('MIN','PF'), ('UTA','SG'), ('DET','SF'), ('TOR','SF'), ('WAS','PF'), ('SAC','SG'),
+        ('CHO','PG'), ('MIL','SG'), ('GSW','SG'), ('PHO','PF'), ('HOU','SF'), ('IND','SF'), ('PHI','C'), ('NYK','SG'),
+        ('POR','PG'), ('DEN','PF'), ('OKC','PG'), ('BOS','SG'), ('DAL','SF'), ('BRK','PF'), ('CHI','PG'),('SAS','PG'),
+        ('MIA','SF'), ('LAC','*'), ('LAL','PG'), ('IND','PF'), ('MEM','PG'), ('ORL','SG'), ('NOP','C')
+    ]
+
+
+    teams_df = get_teams(year)
+    players_df = get_players(year)
+    draft_2011 = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/draft_2011.csv")    
+    draft_2011.columns = ['player_name', 'pick rank', 'year', 'college', 'ws', 'url', 'height (cm)',
+       'weight (lb)', 'uni_url', 'player_id']
+    players_df = players_df.merge(draft_2011[['player_name','pick rank','ws']], how='inner' ,on='player_name')
+
+    #retrieve models
+    model_off = joblib.load('model_off.joblib')
+    model_def = joblib.load('model_def.joblib')
+    model_risk = joblib.load('model_risk.joblib')
+
+    draft = []
+    for team,pos in pick_order_position:
+        
+        team_off_rating, team_def_rating = get_team_ratings(teams_df,team)
+        off_df, def_df, risk_df = split_dataframe(players_df)
+        
+        ratio_off_preds = model_off.predict(off_df)
+        ratio_def_preds = model_def.predict(def_df)
+        risk_proba = model_risk.predict_proba(risk_df)[:,1:].reshape(-1)
+        
+        displayed_features = ['player_name','school_name','uni_off_score','uni_def_score','height_w_shoes','weight', 'pos', 'years',
+                                'pick rank', 'ws']
+        final_df = players_df[displayed_features].copy()
+
+        #intermediate columns for fit score computation (dropped at the end of treatment)
+        final_df['ratio_off_preds'] = ratio_off_preds
+        final_df['ratio_def_preds'] = ratio_def_preds
+        final_df['risk_proba'] = risk_proba
+        #compute fit score
+        final_df['fit_score']=( final_df['ratio_off_preds'] * final_df['uni_off_score'] * team_off_rating\
+                        + final_df['ratio_def_preds'] * final_df['uni_def_score'] * team_def_rating )\
+                        * final_df['risk_proba'] / (final_df['years']**(1/3))
+        
+        if pos != '*':
+            final_df = final_df[final_df['pos'] == str(pos)]
+
+        final_df = final_df.drop(columns=['ratio_off_preds', 'ratio_def_preds', 'years']).sort_values(by='fit_score', ascending=False).head(1)
+        name = final_df['player_name'].iloc[0]
+        pick_rank = final_df['pick rank'].iloc[0]
+        if math.isnan(final_df['ws'].iloc[0]) :
+            ws = 0.0
+        else:
+            ws = final_df['ws'].iloc[0]
+
+        draft.append(
+            {   
+                'Team': team,
+                'Player': name,
+                'pick_rank':pick_rank,
+                'ws':ws
+            }
+        )
+
+        #remove player from initial dataframe for new pick
+        players_df = players_df.drop(players_df[players_df['player_name'] == name].index)
+    
+    return draft
+
 if __name__ == "__main__":
-    reco_by_pos(2011,'BOS','SF')
+    # reco_by_pos(2011,'BOS', 'SF')
+    mock_draft(2011)
