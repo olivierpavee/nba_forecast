@@ -4,7 +4,7 @@ import datetime
 import requests
 import time
 from load_css import local_css
-from nba_forecast.app_utils import get_list_team, get_stat_team, reco_by_pos
+from nba_forecast.app_utils import get_list_team, get_stat_team, reco_by_pos, get_img_player
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -44,65 +44,66 @@ if st.session_state.team_nba == 'False':
     col2d.image('img/boule_cristal.jpg', width=220)
 #col2.markdown('<span class="highlight grey">For which year would you like a prediction?</span>', unsafe_allow_html=True)
 
-    #Sélection d'une année
-st.sidebar.text('Choose a year!')
-col1, col2 = st.sidebar.columns([1,1])
-col1.button('2011', key='btn_2011', on_click=YearDraftSelect, args=(2011,))
-col2.button('2021', key='btn_2021', on_click=YearDraftSelect, args=(2021,))
+with st.expander('Prediction'):
+        #Sélection d'une année
+    st.sidebar.text('Choose a year!')
+    col1, col2 = st.sidebar.columns([1,1])
+    col1.button('2011', key='btn_2011', on_click=YearDraftSelect, args=(2011,))
+    col2.button('2021', key='btn_2021', on_click=YearDraftSelect, args=(2021,))
 
-if st.session_state.year_draft == 2011:
-    st.session_state.team_nba = st.sidebar.selectbox('Choose a team!', get_list_team(2011))
-if st.session_state.year_draft == 2021:
-    st.session_state.team_nba = st.sidebar.selectbox('Choose a team!', get_list_team(2021))
+    if st.session_state.year_draft == 2011:
+        st.session_state.team_nba = st.sidebar.selectbox('Choose a team!', get_list_team(2011))
+    if st.session_state.year_draft == 2021:
+        st.session_state.team_nba = st.sidebar.selectbox('Choose a team!', get_list_team(2021))
 
 
-if st.session_state.team_nba not in ['2021 (Choose a team!)','2011 (Choose a team!)','False']:
-    st.session_state.position = ''
-    st.session_state.position = st.sidebar.selectbox('What position are you looking for?', ['Position', 'SF','PG','SG','PF','C'])
-    team_acro = st.session_state.team_nba[-4:-1]
-    year_draft = st.session_state.year_draft
-    team_row_df = get_stat_team(team_acro, year_draft)
-    #st.write(team_row_df)
-    team_value = team_row_df.values.tolist()[0][:-1]
-    team_label = team_row_df.columns.tolist()[:-1]
-    st.markdown('<center><h2 class="blue bold_2 lobs">Team performances</h2></center>', unsafe_allow_html=True)
-    fig_plotly = px.line_polar(team_row_df, r=team_value, theta=team_label, line_close=True)
-    fig_plotly.update_traces(fill='toself')
-    fig_plotly.update_layout(
-                    polar = dict(
-                        radialaxis = dict(tickvals=[0,1,2,3,4,5], showticklabels=False, ticks=''),
-                        angularaxis = dict(showticklabels=True, ticks='')
-                    )
-)
-    # fig_plotly = go.Figure(data=go.Scatterpolar(
-    #                                     r=team_value,
-    #                                     theta=team_label,
-    #                                     fill='toself'
-    # ))
-    # fig_plotly.update_layout(
-    #                     polar=dict(
-    #                         radialaxis=dict(
-    #                         visible=True
-    #                         ),
-    #                     ),
-    #                     showlegend=False
-    # )
+    if st.session_state.team_nba not in ['2021 (Choose a team!)','2011 (Choose a team!)','False']:
+        st.session_state.position = ''
+        st.session_state.position = st.sidebar.selectbox('What position are you looking for?', ['Position', 'SF','PG','SG','PF','C'])
+        team_acro = st.session_state.team_nba[-4:-1]
+        year_draft = st.session_state.year_draft
+        team_row_df = get_stat_team(team_acro, year_draft)
+        #st.write(team_row_df)
+        team_value = team_row_df.values.tolist()[0][:-1]
+        team_label = team_row_df.columns.tolist()[:-1]
+        st.markdown('<center><h2 class="blue bold_2 lobs">Team performances</h2></center>', unsafe_allow_html=True)
+        fig_plotly = px.line_polar(team_row_df, r=team_value, theta=team_label, line_close=True)
+        fig_plotly.update_traces(fill='toself')
+        fig_plotly.update_layout(
+                        polar = dict(
+                            radialaxis = dict(tickvals=[0,1,2,3,4,5], showticklabels=False, ticks=''),
+                            angularaxis = dict(showticklabels=True, ticks='')
+                        )
+    )
+        # fig_plotly = go.Figure(data=go.Scatterpolar(
+        #                                     r=team_value,
+        #                                     theta=team_label,
+        #                                     fill='toself'
+        # ))
+        # fig_plotly.update_layout(
+        #                     polar=dict(
+        #                         radialaxis=dict(
+        #                         visible=True
+        #                         ),
+        #                     ),
+        #                     showlegend=False
+        # )
 
-    #herokuuuu COUOCUOCUOCUC
-    st.plotly_chart(fig_plotly,use_container_width=True)
+        #herokuuuu COUOCUOCUOCUC
+        st.plotly_chart(fig_plotly,use_container_width=True)
 
-if st.session_state.position not in ['Position','']:
-    url_img = ['https://www.basketball-reference.com/req/202106291/images/players/garneke01.jpg',
-                'https://www.basketball-reference.com/req/202106291/images/players/malonka01.jpg',
-                'https://www.basketball-reference.com/req/202106291/images/players/jamesle01.jpg',
-                'https://www.basketball-reference.com/req/202106291/images/players/westbru01.jpg',
-                'https://www.basketball-reference.com/req/202106291/images/players/dunnkr01.jpg',
-                'https://www.basketball-reference.com/req/202106291/images/players/simmobe01.jpg']
+    if st.session_state.position not in ['Position','']:
+        url_img = ['https://www.basketball-reference.com/req/202106291/images/players/garneke01.jpg',
+                    'https://www.basketball-reference.com/req/202106291/images/players/malonka01.jpg',
+                    'https://www.basketball-reference.com/req/202106291/images/players/jamesle01.jpg',
+                    'https://www.basketball-reference.com/req/202106291/images/players/westbru01.jpg',
+                    'https://www.basketball-reference.com/req/202106291/images/players/dunnkr01.jpg',
+                    'https://www.basketball-reference.com/req/202106291/images/players/simmobe01.jpg']
 
-    url_img_manquante = ('https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg', 120)
+        url_img_manquante = ('https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg', 120)
 
-    recommandations = reco_by_pos(st.session_state.year_draft, team_acro, st.session_state.position)
-    print(len(recommandations))
+        recommandations = reco_by_pos(st.session_state.year_draft, team_acro, st.session_state.position)
+        print(len(recommandations))
 
     with st.expander('Discover our predictions !'):
         col3, col4 = st.columns([1,1])
@@ -120,7 +121,8 @@ if st.session_state.position not in ['Position','']:
         for i in range(len(recommandations)):
         # st.write(st.session_state.team_nba)
         # st.write(st.session_state.position)
-            liste_column[i][0].image(url_img.pop(random.randint(0, len(url_img)-1)))
+            #liste_column[i][0].image(url_img.pop(random.randint(0, len(url_img)-1)))
+            liste_column[i][0].image(get_img_player(recommandations[i]['player_name'],st.session_state.year_draft))
             if recommandations[i]['risk_proba'] > 0.8:
                 liste_column[i][1].success(f'Top {i+1}')
             if recommandations[i]['risk_proba'] < 0.8 and recommandations[i]['risk_proba'] > 0.6:
