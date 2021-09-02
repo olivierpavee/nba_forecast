@@ -47,10 +47,10 @@ st.markdown('---', unsafe_allow_html=True)
 # def main():
 #Chargement du choix utilisateur
     #Image + titre
-col1d, col2d, col3d = st.columns([1,1,1])
+col1d, col2d, col3d = st.columns([1,3,1])
 if st.session_state.team_nba == 'False' and st.session_state.simulation not in ['On']:
     #col2d.image('https://pbs.twimg.com/media/EaAqhJEXgAAQuQ6?format=jpg&name=large', width=300)
-    col2d.image('img/LOGO_DELPHES.png', width=220)
+    col2d.image('img/LOGO_DELPHES.png', width=400)
 #col2.markdown('<span class="highlight grey">For which year would you like a prediction?</span>', unsafe_allow_html=True)
 
 with st.sidebar.expander('Prediction'):
@@ -148,7 +148,7 @@ with st.sidebar.expander('Draft Simulation'):
 if st.session_state.simulation in ['On']:
     if st.session_state.year_draft == 2011:
         colA, colB, colC = st.columns([1,6,1])
-        colB.write(pd.DataFrame(mock_draft(2011)))
+        colB.write(pd.DataFrame(mock_draft(2011)).rename(columns={"pick_rank": "Real Rank", "ws": "Win Share"}))
         # for dictionary in mock_draft(2011):
         #     st.subheader(f"{dictionary['Player']}, pick rank: {dictionary['pick_rank']}, team: {dictionary['Team']}, win share: {dictionary['ws']}")
         #     # col2.subheader(f"Pick Rank : {dictionary['pick_rank']}")
@@ -158,7 +158,7 @@ if st.session_state.simulation in ['On']:
         #     time.sleep(0.5)
     if st.session_state.year_draft == 2021:
         colA, colB, colC = st.columns([1,6,1])
-        colB.write(pd.DataFrame(mock_draft(2021)))
+        colB.write(pd.DataFrame(mock_draft(2021)).rename(columns={"pick_rank": "Real Rank"}).drop(['ws'], axis=1))
 
 
 
