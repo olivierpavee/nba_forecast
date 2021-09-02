@@ -31,3 +31,6 @@ termcolor
 
 #streamlit
 streamlit
+
+#Beautiful Soup
+bs4
