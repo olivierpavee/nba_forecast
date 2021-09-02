@@ -51,6 +51,10 @@ def get_players(year):
     player_file = 'dataset_' + str(year) + '.csv'                               
     return pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/{player_file}") 
 
+def get_draft(year):
+    #retrieve dataframe of NBA players to be drafted that year 
+    draft_file = 'draft_' + str(year) + '.csv'                               
+    return pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/{draft_file}") 
 
 def get_team_ratings(df,team):
     #fetch stats of the team we are interested in
@@ -138,19 +142,27 @@ def reco_by_pos(year, team, pos='*'):
     return final_df.to_dict('records')
 
 def mock_draft(year):
-    pick_order_position=[('CLE','PG'), ('MIN','PF'), ('UTA','SG'), ('DET','SF'), ('TOR','SF'), ('WAS','PF'), ('SAC','SG'),
-        ('CHO','PG'), ('MIL','SG'), ('GSW','SG'), ('PHO','PF'), ('HOU','SF'), ('IND','SF'), ('PHI','C'), ('NYK','SG'),
-        ('POR','PG'), ('DEN','PF'), ('OKC','PG'), ('BOS','SG'), ('DAL','SF'), ('BRK','PF'), ('CHI','PG'),('SAS','PG'),
-        ('MIA','SF'), ('LAC','*'), ('LAL','PG'), ('IND','PF'), ('MEM','PG'), ('ORL','SG'), ('NOP','C')
-    ]
-
+    if str(year) == '2011':
+        pick_order_position=[('CLE','PG'), ('MIN','PF'), ('UTA','SG'), ('DET','SF'), ('TOR','SF'), ('WAS','PF'), ('SAC','SG'),
+            ('CHO','PG'), ('MIL','SG'), ('GSW','SG'), ('PHO','PF'), ('HOU','SF'), ('IND','SF'), ('PHI','C'), ('NYK','SG'),
+            ('POR','PG'), ('DEN','PF'), ('OKC','PG'), ('BOS','SG'), ('DAL','SF'), ('BRK','PF'), ('CHI','PG'),('SAS','PG'),
+            ('MIA','SF'), ('LAC','*'), ('LAL','PG'), ('IND','PF'), ('MEM','PG'), ('ORL','SG'), ('NOP','C')
+        ]
+    elif str(year) == '2021':
+        pick_order_position=[('DET','PG'), ('HOU','SG'), ('CLE','PF'), ('TOR','SF'), ('ORL','PG'), ('OKC','SG'), ('GSW','SF'),
+            ('CHI','PF'), ('SAC','PG'), ('NOP','SG'), ('CHO','SG'), ('SAS','SG'), ('IND','SG'), ('MIN','SG'), ('WAS','SF'),
+            ('MIA','C'), ('MEM','SF'), ('POR','PG'), ('NYK','PF'), ('ATL','PF'), ('DAL','SG'), ('LAL','C'),('BOS','C'),
+            ('MIL','SG'), ('LAC','SG'), ('DEN','SG'), ('BRK','SG'), ('PHI','SG'), ('PHO','C'), ('UTA','PF')
+        ]
 
     teams_df = get_teams(year)
     players_df = get_players(year)
-    draft_2011 = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/draft_2011.csv")    
-    draft_2011.columns = ['player_name', 'pick rank', 'year', 'college', 'ws', 'url', 'height (cm)',
+
+    # draft_df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/draft_2011.csv") 
+    draft_df = get_draft(year)   
+    draft_df.columns = ['player_name', 'pick rank', 'year', 'college', 'ws', 'url', 'height (cm)',
        'weight (lb)', 'uni_url', 'player_id']
-    players_df = players_df.merge(draft_2011[['player_name','pick rank','ws']], how='inner' ,on='player_name')
+    players_df = players_df.merge(draft_df[['player_name','pick rank','ws']], how='inner' ,on='player_name')
 
     #retrieve models
     model_off = joblib.load('model_off.joblib')
@@ -202,9 +214,9 @@ def mock_draft(year):
 
         #remove player from initial dataframe for new pick
         players_df = players_df.drop(players_df[players_df['player_name'] == name].index)
-    
+    print(pd.DataFrame(draft))
     return draft
 
 if __name__ == "__main__":
     # reco_by_pos(2011,'BOS', 'SF')
-    mock_draft(2011)
+    mock_draft(2021)
