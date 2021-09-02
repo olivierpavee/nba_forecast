@@ -1,61 +1,61 @@
-player,pick rank,year,college,url,height (cm),weight (lb),uni_url,player_id
-Kyrie Irving,1,2011,Duke,https://www.basketball-reference.com//players/i/irvinky01.html,188.0,195,https://www.sports-reference.com/cbb/players/kyrie-irving-1.html,kyrie-irving-1
-Derrick Williams,2,2011,Arizona,https://www.basketball-reference.com//players/w/willide02.html,203.2,240,https://www.sports-reference.com/cbb/players/derrick-williams-2.html,derrick-williams-2
-Enes Kanter,3,2011,,https://www.basketball-reference.com//players/k/kanteen01.html,208.3,250,,
-Tristan Thompson,4,2011,Texas,https://www.basketball-reference.com//players/t/thomptr01.html,205.7,254,https://www.sports-reference.com/cbb/players/tristan-thompson-2.html,tristan-thompson-2
-Jonas Valančiūnas,5,2011,,https://www.basketball-reference.com//players/v/valanjo01.html,210.8,265,,
-Jan Veselý,6,2011,,https://www.basketball-reference.com//players/v/veselja01.html,210.8,240,,
-Bismack Biyombo,7,2011,,https://www.basketball-reference.com//players/b/biyombi01.html,203.2,255,,
-Brandon Knight,8,2011,Kentucky,https://www.basketball-reference.com//players/k/knighbr03.html,188.0,182,https://www.sports-reference.com/cbb/players/brandon-knight-1.html,brandon-knight-1
-Kemba Walker,9,2011,UConn,https://www.basketball-reference.com//players/w/walkeke02.html,182.9,184,https://www.sports-reference.com/cbb/players/kemba-walker-1.html,kemba-walker-1
-Jimmer Fredette,10,2011,BYU,https://www.basketball-reference.com//players/f/fredeji01.html,188.0,195,https://www.sports-reference.com/cbb/players/jimmer-fredette-1.html,jimmer-fredette-1
-Klay Thompson,11,2011,Washington State,https://www.basketball-reference.com//players/t/thompkl01.html,198.1,215,https://www.sports-reference.com/cbb/players/klay-thompson-1.html,klay-thompson-1
-Alec Burks,12,2011,Colorado,https://www.basketball-reference.com//players/b/burksal01.html,198.1,214,https://www.sports-reference.com/cbb/players/alec-burks-1.html,alec-burks-1
-Markieff Morris,13,2011,Kansas,https://www.basketball-reference.com//players/m/morrima02.html,205.7,245,https://www.sports-reference.com/cbb/players/markieff-morris-1.html,markieff-morris-1
-Marcus Morris,14,2011,Kansas,https://www.basketball-reference.com//players/m/morrima03.html,203.2,218,https://www.sports-reference.com/cbb/players/marcus-morris-1.html,marcus-morris-1
-Kawhi Leonard,15,2011,San Diego State,https://www.basketball-reference.com//players/l/leonaka01.html,200.7,225,https://www.sports-reference.com/cbb/players/kawhi-leonard-1.html,kawhi-leonard-1
-Nikola Vučević,16,2011,USC,https://www.basketball-reference.com//players/v/vucevni01.html,210.8,260,https://www.sports-reference.com/cbb/players/nikola-vucevic-1.html,nikola-vucevic-1
-Iman Shumpert,17,2011,Georgia Tech,https://www.basketball-reference.com//players/s/shumpim01.html,195.6,215,https://www.sports-reference.com/cbb/players/iman-shumpert-1.html,iman-shumpert-1
-Chris Singleton,18,2011,Florida State,https://www.basketball-reference.com//players/s/singlch01.html,203.2,230,https://www.sports-reference.com/cbb/players/chris-singleton-1.html,chris-singleton-1
-Tobias Harris,19,2011,Tennessee,https://www.basketball-reference.com//players/h/harrito02.html,203.2,226,https://www.sports-reference.com/cbb/players/tobias-harris-1.html,tobias-harris-1
-Donatas Motiejūnas,20,2011,,https://www.basketball-reference.com//players/m/motiedo01.html,213.4,222,,
-Nolan Smith,21,2011,Duke,https://www.basketball-reference.com//players/s/smithno01.html,188.0,185,https://www.sports-reference.com/cbb/players/nolan-smith-1.html,nolan-smith-1
-Kenneth Faried,22,2011,Morehead State University,https://www.basketball-reference.com//players/f/farieke01.html,203.2,220,https://www.sports-reference.com/cbb/players/kenneth-faried-1.html,kenneth-faried-1
-Nikola Mirotić,23,2011,,https://www.basketball-reference.com//players/m/mirotni01.html,208.3,250,,
-Reggie Jackson,24,2011,Boston College,https://www.basketball-reference.com//players/j/jacksre01.html,188.0,208,https://www.sports-reference.com/cbb/players/reggie-jackson-1.html,reggie-jackson-1
-MarShon Brooks,25,2011,Providence,https://www.basketball-reference.com//players/b/brookma01.html,195.6,200,https://www.sports-reference.com/cbb/players/marshon-brooks-1.html,marshon-brooks-1
-Jordan Hamilton,26,2011,Texas,https://www.basketball-reference.com//players/h/hamiljo02.html,200.7,220,https://www.sports-reference.com/cbb/players/jordan-hamilton-2.html,jordan-hamilton-2
-JaJuan Johnson,27,2011,Purdue,https://www.basketball-reference.com//players/j/johnsja02.html,208.3,221,https://www.sports-reference.com/cbb/players/jajuan-johnson-1.html,jajuan-johnson-1
-Norris Cole,28,2011,Cleveland State University,https://www.basketball-reference.com//players/c/coleno01.html,188.0,175,https://www.sports-reference.com/cbb/players/norris-cole-1.html,norris-cole-1
-Cory Joseph,29,2011,Texas,https://www.basketball-reference.com//players/j/josepco01.html,190.5,200,https://www.sports-reference.com/cbb/players/cory-joseph-1.html,cory-joseph-1
-Jimmy Butler,30,2011,Marquette,https://www.basketball-reference.com//players/b/butleji01.html,200.7,230,https://www.sports-reference.com/cbb/players/jimmy-butler-1.html,jimmy-butler-1
-Bojan Bogdanović,31,2011,,https://www.basketball-reference.com//players/b/bogdabo02.html,200.7,226,,
-Justin Harper,32,2011,Richmond,https://www.basketball-reference.com//players/h/harpeju01.html,208.3,225,https://www.sports-reference.com/cbb/players/justin-harper-1.html,justin-harper-1
-Kyle Singler,33,2011,Duke,https://www.basketball-reference.com//players/s/singlky01.html,203.2,228,https://www.sports-reference.com/cbb/players/kyle-singler-1.html,kyle-singler-1
-Shelvin Mack,34,2011,Butler,https://www.basketball-reference.com//players/m/macksh01.html,190.5,203,https://www.sports-reference.com/cbb/players/shelvin-mack-1.html,shelvin-mack-1
-Tyler Honeycutt,35,2011,UCLA,https://www.basketball-reference.com//players/h/honeyty01.html,203.2,188,https://www.sports-reference.com/cbb/players/tyler-honeycutt-1.html,tyler-honeycutt-1
-Jordan Williams,36,2011,Maryland,https://www.basketball-reference.com//players/w/willijo03.html,208.3,260,https://www.sports-reference.com/cbb/players/jordan-williams-1.html,jordan-williams-1
-Trey Thompkins,37,2011,Georgia,https://www.basketball-reference.com//players/t/thomptr02.html,208.3,245,https://www.sports-reference.com/cbb/players/trey-thompkins-1.html,trey-thompkins-1
-Chandler Parsons,38,2011,Florida,https://www.basketball-reference.com//players/p/parsoch01.html,205.7,230,https://www.sports-reference.com/cbb/players/chandler-parsons-1.html,chandler-parsons-1
-Jeremy Tyler,39,2011,,https://www.basketball-reference.com//players/t/tylerje01.html,208.3,260,,
-Jon Leuer,40,2011,Wisconsin,https://www.basketball-reference.com//players/l/leuerjo01.html,208.3,228,https://www.sports-reference.com/cbb/players/jon-leuer-1.html,jon-leuer-1
-Darius Morris,41,2011,Michigan,https://www.basketball-reference.com//players/m/morrida01.html,193.0,190,https://www.sports-reference.com/cbb/players/darius-morris-1.html,darius-morris-1
-Dāvis Bertāns,42,2011,,https://www.basketball-reference.com//players/b/bertada01.html,208.3,225,,
-Malcolm Lee,43,2011,UCLA,https://www.basketball-reference.com//players/l/leema01.html,195.6,200,https://www.sports-reference.com/cbb/players/malcolm-lee-1.html,malcolm-lee-1
-Charles Jenkins,44,2011,Hofstra,https://www.basketball-reference.com//players/j/jenkich01.html,190.5,220,https://www.sports-reference.com/cbb/players/charles-jenkins-1.html,charles-jenkins-1
-Josh Harrellson,45,2011,Kentucky,https://www.basketball-reference.com//players/h/harrejo01.html,208.3,275,https://www.sports-reference.com/cbb/players/josh-harrellson-1.html,josh-harrellson-1
-Andrew Goudelock,46,2011,College of Charleston,https://www.basketball-reference.com//players/g/goudean01.html,190.5,200,https://www.sports-reference.com/cbb/players/andrew-goudelock-1.html,andrew-goudelock-1
-Travis Leslie,47,2011,Georgia,https://www.basketball-reference.com//players/l/leslitr01.html,193.0,205,https://www.sports-reference.com/cbb/players/travis-leslie-1.html,travis-leslie-1
-Keith Benson,48,2011,Oakland,https://www.basketball-reference.com//players/b/bensoke02.html,210.8,240,https://www.sports-reference.com/cbb/players/keith-benson-1.html,keith-benson-1
-Josh Selby,49,2011,Kansas,https://www.basketball-reference.com//players/s/selbyjo01.html,188.0,183,https://www.sports-reference.com/cbb/players/josh-selby-1.html,josh-selby-1
-Lavoy Allen,50,2011,Temple,https://www.basketball-reference.com//players/a/allenla01.html,205.7,260,https://www.sports-reference.com/cbb/players/lavoy-allen-1.html,lavoy-allen-1
-Jon Diebler,51,2011,Ohio State,https://www.basketball-reference.com//players/d/diebljo01.html,198.1,205,https://www.sports-reference.com/cbb/players/jon-diebler-1.html,jon-diebler-1
-Vernon Macklin,52,2011,Florida,https://www.basketball-reference.com//players/m/macklve01.html,208.3,227,https://www.sports-reference.com/cbb/players/vernon-macklin-1.html,vernon-macklin-1
-DeAndre Liggins,53,2011,Kentucky,https://www.basketball-reference.com//players/l/liggide01.html,198.1,209,https://www.sports-reference.com/cbb/players/deandre-liggins-1.html,deandre-liggins-1
-Milan Mačvan,54,2011,,https://www.basketball-reference.com//players/m/macvami01.html,205.7,265,,
-E'Twaun Moore,55,2011,Purdue,https://www.basketball-reference.com//players/m/mooreet01.html,190.5,191,https://www.sports-reference.com/cbb/players/etwaun-moore-1.html,etwaun-moore-1
-Chukwudiebere Maduabum,56,2011,,https://www.basketball-reference.com//players/m/maduach01.html,205.7,210,,
-Tanguy Ngombo,57,2011,,https://www.basketball-reference.com//players/n/ngombta01.html,,,,
-Ater Majok,58,2011,,https://www.basketball-reference.com//players/m/majokat01.html,208.3,233,https://www.sports-reference.com/cbb/players/ater-majok-1.html,ater-majok-1
-Ádám Hanga,59,2011,,https://www.basketball-reference.com//players/h/hangaad01.html,200.7,205,,
-Isaiah Thomas,60,2011,Washington,https://www.basketball-reference.com//players/t/thomais02.html,175.3,185,https://www.sports-reference.com/cbb/players/isaiah-thomas-1.html,isaiah-thomas-1
+player,pick rank,year,college,ws,url,height (cm),weight (lb),uni_url,player_id
+Kyrie Irving,1,2011,Duke,68.7,https://www.basketball-reference.com//players/i/irvinky01.html,188.0,195,https://www.sports-reference.com/cbb/players/kyrie-irving-1.html,kyrie-irving-1
+Derrick Williams,2,2011,Arizona,14.1,https://www.basketball-reference.com//players/w/willide02.html,203.2,240,https://www.sports-reference.com/cbb/players/derrick-williams-2.html,derrick-williams-2
+Enes Kanter,3,2011,,51.4,https://www.basketball-reference.com//players/k/kanteen01.html,208.3,250,,
+Tristan Thompson,4,2011,Texas,46.0,https://www.basketball-reference.com//players/t/thomptr01.html,205.7,254,https://www.sports-reference.com/cbb/players/tristan-thompson-2.html,tristan-thompson-2
+Jonas Valančiūnas,5,2011,,60.1,https://www.basketball-reference.com//players/v/valanjo01.html,210.8,265,,
+Jan Veselý,6,2011,,4.0,https://www.basketball-reference.com//players/v/veselja01.html,210.8,240,,
+Bismack Biyombo,7,2011,,27.6,https://www.basketball-reference.com//players/b/biyombi01.html,203.2,255,,
+Brandon Knight,8,2011,Kentucky,11.5,https://www.basketball-reference.com//players/k/knighbr03.html,188.0,182,https://www.sports-reference.com/cbb/players/brandon-knight-1.html,brandon-knight-1
+Kemba Walker,9,2011,UConn,57.7,https://www.basketball-reference.com//players/w/walkeke02.html,182.9,184,https://www.sports-reference.com/cbb/players/kemba-walker-1.html,kemba-walker-1
+Jimmer Fredette,10,2011,BYU,2.2,https://www.basketball-reference.com//players/f/fredeji01.html,188.0,195,https://www.sports-reference.com/cbb/players/jimmer-fredette-1.html,jimmer-fredette-1
+Klay Thompson,11,2011,Washington State,46.8,https://www.basketball-reference.com//players/t/thompkl01.html,198.1,215,https://www.sports-reference.com/cbb/players/klay-thompson-1.html,klay-thompson-1
+Alec Burks,12,2011,Colorado,20.0,https://www.basketball-reference.com//players/b/burksal01.html,198.1,214,https://www.sports-reference.com/cbb/players/alec-burks-1.html,alec-burks-1
+Markieff Morris,13,2011,Kansas,26.7,https://www.basketball-reference.com//players/m/morrima02.html,205.7,245,https://www.sports-reference.com/cbb/players/markieff-morris-1.html,markieff-morris-1
+Marcus Morris,14,2011,Kansas,34.0,https://www.basketball-reference.com//players/m/morrima03.html,203.2,218,https://www.sports-reference.com/cbb/players/marcus-morris-1.html,marcus-morris-1
+Kawhi Leonard,15,2011,San Diego State,83.3,https://www.basketball-reference.com//players/l/leonaka01.html,200.7,225,https://www.sports-reference.com/cbb/players/kawhi-leonard-1.html,kawhi-leonard-1
+Nikola Vučević,16,2011,USC,54.4,https://www.basketball-reference.com//players/v/vucevni01.html,210.8,260,https://www.sports-reference.com/cbb/players/nikola-vucevic-1.html,nikola-vucevic-1
+Iman Shumpert,17,2011,Georgia Tech,12.9,https://www.basketball-reference.com//players/s/shumpim01.html,195.6,215,https://www.sports-reference.com/cbb/players/iman-shumpert-1.html,iman-shumpert-1
+Chris Singleton,18,2011,Florida State,2.3,https://www.basketball-reference.com//players/s/singlch01.html,203.2,230,https://www.sports-reference.com/cbb/players/chris-singleton-1.html,chris-singleton-1
+Tobias Harris,19,2011,Tennessee,52.8,https://www.basketball-reference.com//players/h/harrito02.html,203.2,226,https://www.sports-reference.com/cbb/players/tobias-harris-1.html,tobias-harris-1
+Donatas Motiejūnas,20,2011,,7.1,https://www.basketball-reference.com//players/m/motiedo01.html,213.4,222,,
+Nolan Smith,21,2011,Duke,-0.8,https://www.basketball-reference.com//players/s/smithno01.html,188.0,185,https://www.sports-reference.com/cbb/players/nolan-smith-1.html,nolan-smith-1
+Kenneth Faried,22,2011,Morehead State University,38.8,https://www.basketball-reference.com//players/f/farieke01.html,203.2,220,https://www.sports-reference.com/cbb/players/kenneth-faried-1.html,kenneth-faried-1
+Nikola Mirotić,23,2011,,20.8,https://www.basketball-reference.com//players/m/mirotni01.html,208.3,250,,
+Reggie Jackson,24,2011,Boston College,33.1,https://www.basketball-reference.com//players/j/jacksre01.html,188.0,208,https://www.sports-reference.com/cbb/players/reggie-jackson-1.html,reggie-jackson-1
+MarShon Brooks,25,2011,Providence,3.3,https://www.basketball-reference.com//players/b/brookma01.html,195.6,200,https://www.sports-reference.com/cbb/players/marshon-brooks-1.html,marshon-brooks-1
+Jordan Hamilton,26,2011,Texas,3.0,https://www.basketball-reference.com//players/h/hamiljo02.html,200.7,220,https://www.sports-reference.com/cbb/players/jordan-hamilton-2.html,jordan-hamilton-2
+JaJuan Johnson,27,2011,Purdue,0.2,https://www.basketball-reference.com//players/j/johnsja02.html,208.3,221,https://www.sports-reference.com/cbb/players/jajuan-johnson-1.html,jajuan-johnson-1
+Norris Cole,28,2011,Cleveland State University,3.0,https://www.basketball-reference.com//players/c/coleno01.html,188.0,175,https://www.sports-reference.com/cbb/players/norris-cole-1.html,norris-cole-1
+Cory Joseph,29,2011,Texas,26.2,https://www.basketball-reference.com//players/j/josepco01.html,190.5,200,https://www.sports-reference.com/cbb/players/cory-joseph-1.html,cory-joseph-1
+Jimmy Butler,30,2011,Marquette,84.4,https://www.basketball-reference.com//players/b/butleji01.html,200.7,230,https://www.sports-reference.com/cbb/players/jimmy-butler-1.html,jimmy-butler-1
+Bojan Bogdanović,31,2011,,27.8,https://www.basketball-reference.com//players/b/bogdabo02.html,200.7,226,,
+Justin Harper,32,2011,Richmond,-0.3,https://www.basketball-reference.com//players/h/harpeju01.html,208.3,225,https://www.sports-reference.com/cbb/players/justin-harper-1.html,justin-harper-1
+Kyle Singler,33,2011,Duke,10.0,https://www.basketball-reference.com//players/s/singlky01.html,203.2,228,https://www.sports-reference.com/cbb/players/kyle-singler-1.html,kyle-singler-1
+Shelvin Mack,34,2011,Butler,10.3,https://www.basketball-reference.com//players/m/macksh01.html,190.5,203,https://www.sports-reference.com/cbb/players/shelvin-mack-1.html,shelvin-mack-1
+Tyler Honeycutt,35,2011,UCLA,-0.1,https://www.basketball-reference.com//players/h/honeyty01.html,203.2,188,https://www.sports-reference.com/cbb/players/tyler-honeycutt-1.html,tyler-honeycutt-1
+Jordan Williams,36,2011,Maryland,1.3,https://www.basketball-reference.com//players/w/willijo03.html,208.3,260,https://www.sports-reference.com/cbb/players/jordan-williams-1.html,jordan-williams-1
+Trey Thompkins,37,2011,Georgia,0.0,https://www.basketball-reference.com//players/t/thomptr02.html,208.3,245,https://www.sports-reference.com/cbb/players/trey-thompkins-1.html,trey-thompkins-1
+Chandler Parsons,38,2011,Florida,28.9,https://www.basketball-reference.com//players/p/parsoch01.html,205.7,230,https://www.sports-reference.com/cbb/players/chandler-parsons-1.html,chandler-parsons-1
+Jeremy Tyler,39,2011,,0.3,https://www.basketball-reference.com//players/t/tylerje01.html,208.3,260,,
+Jon Leuer,40,2011,Wisconsin,13.2,https://www.basketball-reference.com//players/l/leuerjo01.html,208.3,228,https://www.sports-reference.com/cbb/players/jon-leuer-1.html,jon-leuer-1
+Darius Morris,41,2011,Michigan,-0.3,https://www.basketball-reference.com//players/m/morrida01.html,193.0,190,https://www.sports-reference.com/cbb/players/darius-morris-1.html,darius-morris-1
+Dāvis Bertāns,42,2011,,15.9,https://www.basketball-reference.com//players/b/bertada01.html,208.3,225,,
+Malcolm Lee,43,2011,UCLA,0.4,https://www.basketball-reference.com//players/l/leema01.html,195.6,200,https://www.sports-reference.com/cbb/players/malcolm-lee-1.html,malcolm-lee-1
+Charles Jenkins,44,2011,Hofstra,0.5,https://www.basketball-reference.com//players/j/jenkich01.html,190.5,220,https://www.sports-reference.com/cbb/players/charles-jenkins-1.html,charles-jenkins-1
+Josh Harrellson,45,2011,Kentucky,2.1,https://www.basketball-reference.com//players/h/harrejo01.html,208.3,275,https://www.sports-reference.com/cbb/players/josh-harrellson-1.html,josh-harrellson-1
+Andrew Goudelock,46,2011,College of Charleston,0.0,https://www.basketball-reference.com//players/g/goudean01.html,190.5,200,https://www.sports-reference.com/cbb/players/andrew-goudelock-1.html,andrew-goudelock-1
+Travis Leslie,47,2011,Georgia,0.1,https://www.basketball-reference.com//players/l/leslitr01.html,193.0,205,https://www.sports-reference.com/cbb/players/travis-leslie-1.html,travis-leslie-1
+Keith Benson,48,2011,Oakland,0.0,https://www.basketball-reference.com//players/b/bensoke02.html,210.8,240,https://www.sports-reference.com/cbb/players/keith-benson-1.html,keith-benson-1
+Josh Selby,49,2011,Kansas,-0.7,https://www.basketball-reference.com//players/s/selbyjo01.html,188.0,183,https://www.sports-reference.com/cbb/players/josh-selby-1.html,josh-selby-1
+Lavoy Allen,50,2011,Temple,13.8,https://www.basketball-reference.com//players/a/allenla01.html,205.7,260,https://www.sports-reference.com/cbb/players/lavoy-allen-1.html,lavoy-allen-1
+Jon Diebler,51,2011,Ohio State,,https://www.basketball-reference.com//players/d/diebljo01.html,198.1,205,https://www.sports-reference.com/cbb/players/jon-diebler-1.html,jon-diebler-1
+Vernon Macklin,52,2011,Florida,0.5,https://www.basketball-reference.com//players/m/macklve01.html,208.3,227,https://www.sports-reference.com/cbb/players/vernon-macklin-1.html,vernon-macklin-1
+DeAndre Liggins,53,2011,Kentucky,1.6,https://www.basketball-reference.com//players/l/liggide01.html,198.1,209,https://www.sports-reference.com/cbb/players/deandre-liggins-1.html,deandre-liggins-1
+Milan Mačvan,54,2011,,,https://www.basketball-reference.com//players/m/macvami01.html,205.7,265,,
+E'Twaun Moore,55,2011,Purdue,14.8,https://www.basketball-reference.com//players/m/mooreet01.html,190.5,191,https://www.sports-reference.com/cbb/players/etwaun-moore-1.html,etwaun-moore-1
+Chukwudiebere Maduabum,56,2011,,,https://www.basketball-reference.com//players/m/maduach01.html,205.7,210,,
+Tanguy Ngombo,57,2011,,,https://www.basketball-reference.com//players/n/ngombta01.html,,,,
+Ater Majok,58,2011,,,https://www.basketball-reference.com//players/m/majokat01.html,208.3,233,https://www.sports-reference.com/cbb/players/ater-majok-1.html,ater-majok-1
+Ádám Hanga,59,2011,,,https://www.basketball-reference.com//players/h/hangaad01.html,200.7,205,,
+Isaiah Thomas,60,2011,Washington,45.2,https://www.basketball-reference.com//players/t/thomais02.html,175.3,185,https://www.sports-reference.com/cbb/players/isaiah-thomas-1.html,isaiah-thomas-1
