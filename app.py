@@ -4,7 +4,7 @@ import datetime
 import requests
 import time
 from load_css import local_css
-from nba_forecast.app_utils import get_list_team, get_stat_team, reco_by_pos
+from nba_forecast.app_utils import get_list_team, get_stat_team, reco_by_pos, get_img_player
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -120,7 +120,8 @@ if st.session_state.position not in ['Position','']:
         for i in range(len(recommandations)):
         # st.write(st.session_state.team_nba)
         # st.write(st.session_state.position)
-            liste_column[i][0].image(url_img.pop(random.randint(0, len(url_img)-1)))
+            #liste_column[i][0].image(url_img.pop(random.randint(0, len(url_img)-1)))
+            liste_column[i][0].image(get_img_player(recommandations[i]['player_name'],st.session_state.year_draft))
             if recommandations[i]['risk_proba'] > 0.8:
                 liste_column[i][1].success(f'Top {i+1}')
             if recommandations[i]['risk_proba'] < 0.8 and recommandations[i]['risk_proba'] > 0.6:

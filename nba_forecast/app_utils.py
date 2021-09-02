@@ -4,6 +4,8 @@ from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 import joblib
 import os
+import requests
+from bs4 import BeautifulSoup
 
 CURRENT_PATH = os.getcwd()
 
@@ -46,17 +48,17 @@ def reco_by_pos(year, team, pos):
 
     #fetch stats of the team we are interested in
     team_stats = teams_df.loc[teams_df['Team'] == team]
-    print(team_stats)
-    print(team_stats.values.flatten().tolist())
+    # print(team_stats)
+    # print(team_stats.values.flatten().tolist())
     team_stats_list = team_stats.values.flatten().tolist()
     team_off_rating = team_stats_list[1]
     team_def_rating = team_stats_list[2]
 
-    #retrieve dataframe of NBA players to be drafted that year 
+    #retrieve dataframe of NBA players to be drafted that year
     player_file = 'dataset_' + str(year) + '.csv'                               #TO BE REVIEWED
     players_df = pd.read_csv(f"{CURRENT_PATH}/nba_forecast/data/{player_file}") #TO BE REVIEWED
 
-    print(players_df.head())
+    # print(players_df.head())
 
     #retrieve models
     model_off = joblib.load('model_off.joblib')
@@ -71,7 +73,7 @@ def reco_by_pos(year, team, pos):
 
     athletics_features = [  'body_fat_pct', 'hand_length', 'hand_width', 'height_wo_shoes',\
                             'height_w_shoes', 'standing_reach', 'weight', 'wingspan']
-    
+
     risk_features = [ 'mp','per','ts_pct','fg3a_per_fga_pct','fta_per_fga_pct',
           'orb_pct','drb_pct','ast_pct','stl_pct','blk_pct','tov_pct','usg_pct','ows','dws','obpm','dbpm','years']
 
@@ -81,7 +83,7 @@ def reco_by_pos(year, team, pos):
     for column in to_be_converted:
         players_df[column] = players_df[column].astype('float64')
 
-    
+
     #get models predictions for all dataset
     ratio_off_preds = model_off.predict(players_df[off_features+athletics_features])
 
@@ -114,6 +116,101 @@ def reco_by_pos(year, team, pos):
     # print(final_df.to_dict('records'))
     # print(len(final_df.to_dict('records')))
     return final_df.to_dict('records')
+
+def get_img_player(player_name,draft_year):
+
+    player_name = '-'.join(player_name.lower().split(' '))
+
+    if draft_year == 2011:
+        result = get_player_draft_2011(player_name)
+        #print(result)
+        if result == None:
+            return 'https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg'
+        else:
+            #print(requests.get('https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{result}.png').content)
+            return f'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{result}.png'
+
+
+    if draft_year == 2021:
+        try:
+            r = requests.get(f'https://www.nba.com/draft/2021/prospects/{player_name}')
+            soup = BeautifulSoup(r.content, "html.parser")
+            return soup.find_all('img', class_='opacity-0')[0]['src']
+        except:
+            return 'https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg'
+
+
+def get_player_draft_2011(player_name):
+    list_player_draft_2011 = ['Kyrie Irving',
+'Derrick Williams',
+'Enes Kanter',
+'Tristan Thompson',
+'Jonas Valanciunas',
+'Jan Vesely',
+'Bismack Biyombo',
+'Brandon Knight',
+'Kemba Walker',
+'Jimmer Fredette',
+'Klay Thompson',
+'Alec Burks',
+'Markieff Morris',
+'Marcus Morris Sr.',
+'Kawhi Leonard',
+'Nikola Vucevic',
+'Iman Shumpert',
+'Chris Singleton',
+'Tobias Harris',
+'Donatas Motiejunas',
+'Nolan Smith',
+'Kenneth Faried',
+'Nikola Mirotic',
+'Reggie Jackson',
+'MarShon Brooks',
+'Jordan Hamilton',
+'JaJuan Johnson',
+'Norris Cole',
+'Cory Joseph',
+'Jimmy Butler',
+'Bojan Bogdanovic',
+'Justin Harper',
+'Kyle Singler',
+'Shelvin Mack',
+'Tyler Honeycutt',
+'Jordan Williams',
+'Trey Thompkins',
+'Chandler Parsons',
+'Jeremy Tyler',
+'Jon Leuer',
+'Darius Morris',
+'Davis Bertans',
+'Malcolm Lee',
+'Charles Jenkins',
+'Josh Harrellson',
+'Andrew Goudelock',
+'Travis Leslie',
+'Keith Benson',
+'Josh Selby',
+'Lavoy Allen',
+'Jon Diebler',
+'Vernon Macklin',
+'DeAndre Liggins',
+#MIlan Macvan
+"E'Twaun Moore",
+#Chukwudiebere Maduabum
+#Tanguy Ngombo
+#Ater Majok
+#Adam Hanga
+'Isaiah Thomas']
+    list_player_draft_2011_format = ['-'.join(x.lower().split(' ')) for x in list_player_draft_2011]
+    player_name_format = '-'.join(player_name.lower().split(' '))
+
+    if player_name_format in list_player_draft_2011_format:
+        for idx, val in enumerate(list_player_draft_2011_format, start=202681):
+            if val == player_name_format:
+                return idx
+    return None
+
+
 
 if __name__ == "__main__":
     reco_by_pos(2011,'BOS','SF')
