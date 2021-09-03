@@ -147,9 +147,10 @@ with st.sidebar.expander('Draft Simulation'):
 
 if st.session_state.simulation in ['On']:
     if st.session_state.year_draft == 2011:
-        colA, colB, colC = st.columns([1,15,1])
+        colA, colB, colC = st.columns([1,30,1])
+        #1,15,1
         #colB.write(pd.DataFrame(mock_draft(2011)).rename(columns={"pick_rank": "Real Rank", "ws": "Win Share"}))
-        colB.dataframe(pd.DataFrame(mock_draft(2011)).rename(columns={"pick_rank": "Real Rank", "ws": "Win Share"}), width=1500, height=900)
+        colB.dataframe(pd.DataFrame(mock_draft(2011), index=range(1,31)).rename(columns={"pick_rank": "Real Rank", "ws": "Win Share"}), width=1500, height=900)
         # for dictionary in mock_draft(2011):
         #     st.subheader(f"{dictionary['Player']}, pick rank: {dictionary['pick_rank']}, team: {dictionary['Team']}, win share: {dictionary['ws']}")
         #     # col2.subheader(f"Pick Rank : {dictionary['pick_rank']}")
@@ -158,8 +159,9 @@ if st.session_state.simulation in ['On']:
         #     col2.markdown('---')
         #     time.sleep(0.5)
     if st.session_state.year_draft == 2021:
-        colA, colB, colC = st.columns([1,6,1])
-        colB.dataframe(pd.DataFrame(mock_draft(2021)).rename(columns={"pick_rank": "Real Rank"}).drop(['ws'], axis=1), width=1500, height=900)
+        colA, colB, colC = st.columns([1,10,1])
+        #1,6,1
+        colB.dataframe(pd.DataFrame(mock_draft(2021), index=range(1,31)).rename(columns={"pick_rank": "Real Rank"}).drop(['ws'], axis=1), width=1500, height=900)
 
 
 

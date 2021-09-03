@@ -136,7 +136,7 @@ def reco_by_pos(year, team, pos='*'):
     #drop columns we don't need anymore and keep top five
     final_df = final_df.drop(columns=['ratio_off_preds', 'ratio_def_preds', 'years']).sort_values(by='fit_score', ascending=False).head(5)
 
-    print(final_df)
+    #print(final_df)
     return final_df.to_dict('records')
 
 def mock_draft(year):
@@ -212,7 +212,7 @@ def mock_draft(year):
 
         #remove player from initial dataframe for new pick
         players_df = players_df.drop(players_df[players_df['player_name'] == name].index)
-    print(pd.DataFrame(draft))
+    #print(pd.DataFrame(draft))
     return draft
 
 import requests
