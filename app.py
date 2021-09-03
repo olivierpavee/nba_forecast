@@ -128,6 +128,7 @@ if st.session_state.position not in ['Position','']:
             # st.write(st.session_state.position)
                 #liste_column[i][0].image(url_img.pop(random.randint(0, len(url_img)-1)))
                 liste_column[i][0].image(get_img_player(recommandations[i]['player_name'],st.session_state.year_draft))
+                print(liste_column[i][0])
                 if recommandations[i]['risk_proba'] > 0.8:
                     liste_column[i][1].success(f'Top {i+1}')
                 if recommandations[i]['risk_proba'] < 0.8 and recommandations[i]['risk_proba'] > 0.6:
@@ -150,7 +151,10 @@ if st.session_state.simulation in ['On']:
         colA, colB, colC = st.columns([1,30,1])
         #1,15,1
         #colB.write(pd.DataFrame(mock_draft(2011)).rename(columns={"pick_rank": "Real Rank", "ws": "Win Share"}))
-        colB.dataframe(pd.DataFrame(mock_draft(2011), index=range(1,31)).rename(columns={"pick_rank": "Real Rank", "ws": "Win Share"}), width=1500, height=900)
+
+        dataframe_draft_2011 = pd.DataFrame(mock_draft(2011), index=range(1,31)).rename(columns={"pick_rank": "Real Rank", "ws": "Win Share"})
+        colB.dataframe(dataframe_draft_2011.style.format({'Win Share':'{:.1f}'}), width=1500, height=900)
+
         # for dictionary in mock_draft(2011):
         #     st.subheader(f"{dictionary['Player']}, pick rank: {dictionary['pick_rank']}, team: {dictionary['Team']}, win share: {dictionary['ws']}")
         #     # col2.subheader(f"Pick Rank : {dictionary['pick_rank']}")

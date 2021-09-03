@@ -4,6 +4,7 @@ import pandas as pd
 import joblib
 import os
 import math
+# import html5lib
 
 CURRENT_PATH = os.getcwd()
 
@@ -225,17 +226,29 @@ def get_img_player(player_name,draft_year):
     if draft_year == 2011:
         result = get_player_draft_2011(player_name)
         #print(result)
+
         if result == None:
             return 'https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg'
         else:
-            #print(requests.get('https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{result}.png').content)
+            # print(requests.get('https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{result}.png').content)
+            # print(requests.status_codes)
+
             return f'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{result}.png'
+
+        # soup = BeautifulSoup(requests.get(f'https://www.nba.com/stats/player/{result}/career/').content, "html5lib")
+        # url = soup.find_all('div', class_ = 'summary-player__logo')
+        # #.find('img')['src']
+        # #.img['src']
+        # print(url)
+        # exit()
+
 
 
     if draft_year == 2021:
         try:
             r = requests.get(f'https://www.nba.com/draft/2021/prospects/{player_name}')
             soup = BeautifulSoup(r.content, "html.parser")
+            print(soup)
             return soup.find_all('img', class_='opacity-0')[0]['src']
         except:
             return 'https://www.mecafroid.fr/images/virtuemart/typeless/photo-produit-indisponible-meca-froid_250x285.jpg'
